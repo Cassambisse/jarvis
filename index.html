@@ -105,6 +105,7 @@
       <button id="play">▶ RAPPORTO</button>
       <button id="stop">■ STOP</button>
       <button id="mic">🎙 PARLA</button>
+      <button id="wake">👂 "JARVIS" OFF</button>
     </div>
     <div class="panel" style="width:100%">
       <h2>JARVIS</h2>
@@ -131,8 +132,8 @@
     <label for="sKey">Chiave Gemini (resta salvata solo su questo dispositivo)</label>
     <input id="sKey" type="password" autocomplete="off" placeholder="Incolla qui la chiave AIza…">
     <label for="sVoice">Voce Gemini</label>
-    <input id="sVoice" placeholder="Charon">
-    <div class="hint">Nomi di voci maschili da provare: Charon, Orus, Iapetus, Algieba, Fenrir.</div>
+    <input id="sVoice" placeholder="Aoede">
+    <div class="hint">Voci femminili: Aoede, Sulafat, Kore, Leda, Callirrhoe, Despina. Voci maschili: Charon, Orus, Iapetus, Algieba.</div>
     <label for="sMode">Modalità all'avvio</label>
     <select id="sMode"><option value="iron">Ironico</option><option value="pro">Professionale</option></select>
     <div class="row">
@@ -292,7 +293,7 @@ function datiPerRapporto(){
 function rapportoLocale(){
   const sez = (N && N.sezioni) || {};
   const tit = (arr,n) => (arr||[]).slice(0,n).map(x=>x.titolo).join('. ');
-  let t = 'Buongiorno, ' + CFG.nome + '. Sono le ' + ora() + '.\n\n';
+  let t = $('greet').textContent + ' Sono le ' + ora() + '.\n\n';
   if(W) t += 'A ' + CFG.citta + ' ci sono ' + W.ora + ' gradi, ' + W.cielo.toLowerCase() + '. Massima ' + W.max + ', minima ' + W.min + ', probabilità di pioggia ' + W.pioggia + ' per cento.\n\n';
   if(sez.prime) t += 'In prima pagina: ' + tit(sez.prime,3) + '.\n\n';
   if(sez.cronaca) t += 'Cronaca: ' + tit(sez.cronaca,2) + '.\n\n';
@@ -331,10 +332,10 @@ function pezzi(testo){
 }
 async function ttsGemini(testo){
   const key = store.get('key',''); if(!key) throw new Error('nokey');
-  const voce = store.get('voce','Charon') || 'Charon';
+  const voce = store.get('voce','Aoede') || 'Aoede';
   const stile = mode==='iron'
-    ? 'Leggi in italiano con voce maschile calma, elegante e naturale, con ironia asciutta e sottile, come un maggiordomo britannico di gran classe. Ritmo scorrevole, pause naturali: '
-    : 'Leggi in italiano con voce maschile calma, chiara e professionale, ritmo scorrevole e pause naturali: ';
+    ? 'Leggi in italiano come una persona vera che parla a un amico: voce calda, naturale e rilassata, con un sorriso nella voce e un\'ironia sottile e complice. Ritmo scorrevole, respiri e pause naturali, intonazione varia, mai robotica: '
+    : 'Leggi in italiano come una persona vera: voce calda, chiara e professionale, ritmo scorrevole, pause naturali, intonazione varia, mai robotica: ';
   let err;
   for(const m of CFG.voce){
     try{
@@ -383,13 +384,14 @@ function voceAndroid(testo, mio){
       const u = new SpeechSynthesisUtterance(testo);
       u.lang='it-IT'; u.rate=1.05; u.pitch=1.0;
       const v = s.getVoices().filter(v=>v.lang && v.lang.startsWith('it'));
-      const m = v.find(v=>/diego|giuseppe|cosimo|luca|male|uomo/i.test(v.name));
+      const m = v.find(v=>/elsa|isabella|alice|federica|paola|female|donna/i.test(v.name));
       if(m||v[0]) u.voice = m||v[0];
       u.onend = u.onerror = res; s.speak(u);
     }catch(e){ res() }
   });
 }
 async function parla(testo, mio = ++stopToken){
+  pausaWake();
   setState('speaking'); setStatus('IN TRASMISSIONE');
   const parti = pezzi(testo);
   let usaGemini = !!store.get('key','');
@@ -411,25 +413,26 @@ async function parla(testo, mio = ++stopToken){
     }
     await voceAndroid(parti[i], mio);
   }
-  if(mio === stopToken){ setState(''); setStatus('SISTEMI ONLINE') }
+  if(mio === stopToken){ setState(''); setStatus(wake ? 'IN ASCOLTO · DICA "JARVIS"' : 'SISTEMI ONLINE'); riprendiWake() }
 }
 function ferma(){
   stopToken++;
   try{ if(sorgente) sorgente.stop() }catch(e){}
   try{ speechSynthesis.cancel() }catch(e){}
-  setState(''); setStatus('SISTEMI ONLINE');
+  setState(''); setStatus(wake ? 'IN ASCOLTO · DICA "JARVIS"' : 'SISTEMI ONLINE');
+  riprendiWake();
 }
 
 /* ================= COMANDI VOCALI ================= */
 function ascolta(){
   const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
   if(!SR){ setStatus('MICROFONO NON SUPPORTATO: USI CHROME'); return }
-  ferma(); audioCtx();
+  ferma(); pausaWake(); audioCtx();
   const rec = new SR(); rec.lang='it-IT'; rec.interimResults=false; rec.maxAlternatives=1;
   setState('listening'); setStatus('LA ASCOLTO…');
   rec.onresult = e => comando(e.results[0][0].transcript);
   rec.onerror = () => { setState(''); setStatus('NON HO SENTITO, RIPROVI') };
-  rec.onend = () => { if($('reactor').classList.contains('listening')){ setState(''); setStatus('SISTEMI ONLINE') } };
+  rec.onend = () => { if($('reactor').classList.contains('listening')){ setState(''); setStatus('SISTEMI ONLINE'); riprendiWake() } };
   rec.start();
 }
 async function comando(frase){
@@ -440,6 +443,7 @@ async function comando(frase){
   if(/(ironic|scherz|rilassat)/.test(f) && f.length < 30){ setMode('iron'); return parla('Modalità ironica attivata. Finalmente, ' + CFG.nome + '.') }
   if(/rapporto|buongiorno|novità|notizie del giorno/.test(f)) return rapporto();
   // domanda libera
+  pausaWake();
   const mio = ++stopToken;
   setState('thinking'); setStatus('ELABORO…');
   try{
@@ -456,13 +460,59 @@ async function comando(frase){
   }
 }
 
+/* ================= PAROLA DI ATTIVAZIONE "JARVIS" ================= */
+let wake = false, wakeRec = null, inPausa = false, attesa = false, wakeLock = null;
+const NOME_RE = /\b(jarvis|jarvi|giarvis|jervis|jarvys|gervis|jarviz)\b/i;
+async function schermoAcceso(on){
+  try{
+    if(on && 'wakeLock' in navigator){ wakeLock = await navigator.wakeLock.request('screen') }
+    else if(!on && wakeLock){ await wakeLock.release(); wakeLock = null }
+  }catch(e){}
+}
+function avviaWake(){
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if(!wake || inPausa || wakeRec || !SR) return;
+  const rec = new SR(); rec.lang = 'it-IT'; rec.continuous = true; rec.interimResults = false;
+  rec.onresult = e => {
+    for(let i = e.resultIndex; i < e.results.length; i++){
+      if(!e.results[i].isFinal) continue;
+      const t = e.results[i][0].transcript.trim();
+      if(attesa){ attesa = false; comando(t); return }
+      const m = t.match(NOME_RE);
+      if(m){
+        const resto = t.slice(m.index + m[0].length).replace(/^[\s,.!?]+/, '');
+        if(resto.length > 2) comando(resto);
+        else { attesa = true; parla(['Mi dica, ','Sono qui, ','A sua disposizione, '][Math.floor(Math.random()*3)] + CFG.nome + '.') }
+        return;
+      }
+    }
+  };
+  rec.onerror = ev => {
+    if(ev.error === 'not-allowed' || ev.error === 'service-not-allowed'){ setWake(false); setStatus('PERMESSO MICROFONO NEGATO') }
+  };
+  rec.onend = () => { wakeRec = null; if(wake && !inPausa) setTimeout(avviaWake, 250) };
+  try{ rec.start(); wakeRec = rec }catch(e){ wakeRec = null }
+}
+function pausaWake(){ inPausa = true; if(wakeRec){ try{ wakeRec.abort() }catch(e){} wakeRec = null } }
+function riprendiWake(){ inPausa = false; if(wake) setTimeout(avviaWake, 400) }
+function setWake(on){
+  wake = on; store.set('wake', on ? '1' : '0');
+  $('wake').textContent = on ? '👂 "JARVIS" ON' : '👂 "JARVIS" OFF';
+  $('wake').classList.toggle('on', on);
+  schermoAcceso(on);
+  if(on){ setStatus('IN ASCOLTO · DICA "JARVIS"'); inPausa = false; avviaWake() }
+  else { pausaWake(); attesa = false; setStatus('SISTEMI ONLINE') }
+}
+$('wake').onclick = () => { audioCtx(); setWake(!wake) };
+document.addEventListener('visibilitychange', () => { if(document.visibilityState === 'visible' && wake){ schermoAcceso(true); riprendiWake() } });
+
 /* ================= IMPOSTAZIONI ================= */
 function apriSet(){
-  $('sKey').value = store.get('key',''); $('sVoice').value = store.get('voce','Charon'); $('sMode').value = store.get('modo','iron');
+  $('sKey').value = store.get('key',''); $('sVoice').value = store.get('voce','Aoede'); $('sMode').value = store.get('modo','iron');
   $('sMsg').textContent = ''; $('settings').classList.add('open');
 }
 function salvaSet(){
-  store.set('key', $('sKey').value.trim()); store.set('voce', $('sVoice').value.trim() || 'Charon');
+  store.set('key', $('sKey').value.trim()); store.set('voce', $('sVoice').value.trim() || 'Aoede');
   setMode($('sMode').value); $('sMsg').textContent = 'Salvato.';
 }
 $('openSet').onclick = apriSet;
@@ -485,6 +535,7 @@ Promise.all([loadWeather(), loadNews()]).then(() => {
   const h = new Date().getHours();
   const fatto = store.get('ultimoRapporto','') === new Date().toDateString();
   setStatus(h < 12 && !fatto ? 'RAPPORTO PRONTO · TOCCHI IL REATTORE' : 'SISTEMI ONLINE');
+  if(store.get('wake','0') === '1') setStatus('TOCCHI 👂 PER RIATTIVARE L\'ASCOLTO');
 });
 setInterval(loadWeather, 30*60*1000);
 setInterval(loadNews, 30*60*1000);
