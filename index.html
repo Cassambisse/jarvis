@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#03080f">
+<title>JARVIS</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{--c:#3fd8ff;--c2:#0a8fbf;--bg:#03080f;--panel:rgba(10,40,60,.35);--txt:#cfefff;--warn:#ffb347;--err:#ff6b6b}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:radial-gradient(ellipse at 50% 20%,#0b2233 0%,var(--bg) 70%);color:var(--txt);font-family:'Rajdhani',sans-serif;min-height:100vh;overflow-x:hidden}
+  body:before{content:"";position:fixed;inset:0;background:repeating-linear-gradient(0deg,rgba(63,216,255,.03) 0 1px,transparent 1px 3px);pointer-events:none}
+  header{display:flex;justify-content:space-between;align-items:center;padding:18px 28px}
+  .logo{font-family:'Orbitron';font-size:26px;letter-spacing:8px;color:var(--c);text-shadow:0 0 12px var(--c)}
+  .right{display:flex;align-items:center;gap:18px}
+  .clock{font-family:'Orbitron';font-size:22px;color:var(--c);text-align:right}
+  .clock small{display:block;font-family:'Rajdhani';font-size:15px;color:var(--txt);opacity:.8}
+  .gear{font-size:26px;cursor:pointer;color:var(--c);background:none;border:none;padding:4px}
+  main{display:grid;grid-template-columns:1fr 340px 1fr;gap:20px;padding:0 28px 28px}
+  @media(max-width:1000px){main{grid-template-columns:1fr}.core{order:-1}}
+  .panel{background:var(--panel);border:1px solid rgba(63,216,255,.35);border-radius:6px;padding:16px;position:relative;box-shadow:inset 0 0 25px rgba(63,216,255,.08)}
+  .panel:before,.panel:after{content:"";position:absolute;width:14px;height:14px;border:2px solid var(--c)}
+  .panel:before{top:-2px;left:-2px;border-right:none;border-bottom:none}
+  .panel:after{bottom:-2px;right:-2px;border-left:none;border-top:none}
+  h2{font-family:'Orbitron';font-size:13px;letter-spacing:3px;color:var(--c);margin-bottom:12px}
+  .col{display:flex;flex-direction:column;gap:20px}
+  .core{display:flex;flex-direction:column;align-items:center;gap:16px}
+  .reactor{width:250px;height:250px;position:relative;cursor:pointer;-webkit-tap-highlight-color:transparent}
+  .ring{position:absolute;inset:0;border-radius:50%;border:2px solid transparent}
+  .r1{border-top-color:var(--c);border-bottom-color:var(--c);animation:spin 6s linear infinite}
+  .r2{inset:22px;border-left-color:var(--c2);border-right-color:var(--c2);border-width:4px;animation:spin 4s linear infinite reverse}
+  .r3{inset:48px;border:1px dashed rgba(63,216,255,.6);animation:spin 12s linear infinite}
+  .r4{inset:78px;background:radial-gradient(circle,#e8fbff 0%,var(--c) 35%,rgba(63,216,255,.1) 70%);box-shadow:0 0 50px var(--c);animation:pulse 2.4s ease-in-out infinite}
+  .speaking .r4{animation:pulse .5s ease-in-out infinite}
+  .thinking .r1,.thinking .r2{animation-duration:1s}
+  .listening .r4{background:radial-gradient(circle,#fff 0%,#7dffb0 35%,rgba(125,255,176,.1) 70%);box-shadow:0 0 50px #7dffb0}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  @keyframes pulse{50%{transform:scale(.88);opacity:.8}}
+  .status{font-family:'Orbitron';font-size:13px;letter-spacing:3px;color:var(--c);text-align:center;min-height:18px}
+  .greet{font-size:22px;text-align:center}
+  .btns{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+  button{background:transparent;border:1px solid var(--c);color:var(--c);font-family:'Orbitron';font-size:12px;letter-spacing:2px;padding:12px 16px;border-radius:4px;cursor:pointer}
+  button:active,button.on{background:var(--c);color:#02121c}
+  .toggle{display:flex;border:1px solid var(--c);border-radius:4px;overflow:hidden}
+  .toggle button{border:none;border-radius:0}
+  .wnow{display:flex;align-items:center;gap:14px}
+  .temp{font-family:'Orbitron';font-size:46px;color:#fff}
+  .wdesc{font-size:18px}
+  .wgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px;font-size:14px}
+  .wgrid div{background:rgba(63,216,255,.07);padding:6px;border-radius:4px;text-align:center}
+  .wgrid b{display:block;color:var(--c);font-size:16px}
+  .hours{display:flex;justify-content:space-between;margin-top:12px;font-size:14px;text-align:center}
+  ul{list-style:none}
+  li{padding:8px 0;border-bottom:1px solid rgba(63,216,255,.15);font-size:16px;line-height:1.3}
+  li a{color:var(--txt);text-decoration:none}
+  li span{color:var(--c);font-size:12px;letter-spacing:1px;display:block}
+  .report{font-size:17px;line-height:1.5;white-space:pre-line;max-height:320px;overflow:auto}
+  .sub{font-size:13px;opacity:.7;margin-top:8px}
+  .muted{opacity:.6;font-size:15px}
+  /* impostazioni */
+  #settings{position:fixed;inset:0;background:rgba(0,0,0,.8);display:none;align-items:center;justify-content:center;z-index:10;padding:20px}
+  #settings.open{display:flex}
+  #settings .panel{background:#06141f;width:100%;max-width:520px}
+  label{display:block;margin:12px 0 4px;font-size:15px}
+  input,select{width:100%;padding:10px;background:#02101a;border:1px solid var(--c2);color:#fff;border-radius:4px;font-size:16px;font-family:'Rajdhani'}
+  .row{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+  .hint{font-size:13px;opacity:.7;margin-top:4px}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">J.A.R.V.I.S.</div>
+  <div class="right">
+    <div class="clock" id="clock">--:--<small id="date"></small></div>
+    <button class="gear" id="openSet" title="Impostazioni">⚙</button>
+  </div>
+</header>
+
+<main>
+  <section class="col">
+    <div class="panel">
+      <h2 id="wTitle">METEO</h2>
+      <div id="weather" class="muted">Caricamento meteo…</div>
+    </div>
+    <div class="panel">
+      <h2>PRIME PAGINE</h2>
+      <ul id="nPrime"><li class="muted">Caricamento…</li></ul>
+    </div>
+  </section>
+
+  <section class="core">
+    <div class="reactor" id="reactor" title="Tocca per il rapporto">
+      <div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div><div class="ring r4"></div>
+    </div>
+    <div class="status" id="status">AVVIO SISTEMI…</div>
+    <div class="greet" id="greet"></div>
+    <div class="toggle">
+      <button id="mIron">IRONICO</button><button id="mPro">PROFESSIONALE</button>
+    </div>
+    <div class="btns">
+      <button id="play">▶ RAPPORTO</button>
+      <button id="stop">■ STOP</button>
+      <button id="mic">🎙 PARLA</button>
+    </div>
+    <div class="panel" style="width:100%">
+      <h2>JARVIS</h2>
+      <div class="report" id="report">Tocchi il reattore per il rapporto mattutino, oppure "PARLA" per darmi un ordine.</div>
+      <div class="sub" id="sub"></div>
+    </div>
+  </section>
+
+  <section class="col">
+    <div class="panel">
+      <h2>CRONACA NAZIONALE</h2>
+      <ul id="nCronaca"><li class="muted">Caricamento…</li></ul>
+    </div>
+    <div class="panel">
+      <h2>ABRUZZO · TERAMO</h2>
+      <ul id="nAbruzzo"><li class="muted">Caricamento…</li></ul>
+    </div>
+  </section>
+</main>
+
+<div id="settings">
+  <div class="panel">
+    <h2>IMPOSTAZIONI</h2>
+    <label for="sKey">Chiave Gemini (resta salvata solo su questo dispositivo)</label>
+    <input id="sKey" type="password" autocomplete="off" placeholder="Incolla qui la chiave AIza…">
+    <label for="sVoice">Voce Gemini</label>
+    <input id="sVoice" placeholder="Charon">
+    <div class="hint">Nomi di voci maschili da provare: Charon, Orus, Iapetus, Algieba, Fenrir.</div>
+    <label for="sMode">Modalità all'avvio</label>
+    <select id="sMode"><option value="iron">Ironico</option><option value="pro">Professionale</option></select>
+    <div class="row">
+      <button id="sSave">SALVA</button>
+      <button id="sTest">PROVA VOCE</button>
+      <button id="sClose">CHIUDI</button>
+    </div>
+    <div class="hint" id="sMsg"></div>
+  </div>
+</div>
+
+<script>
+/* ================= CONFIGURAZIONE ================= */
+const CFG = {
+  nome: 'Moreno',
+  citta: 'Notaresco',
+  lat: 42.656, lon: 13.894,
+  // file delle notizie aggiornato da GitHub ogni mattina
+  newsUrl: 'https://raw.githubusercontent.com/Cassambisse/jarvis/main/news.json',
+  // modelli gratuiti: se uno smette di funzionare passa al successivo
+  testo: ['gemini-3.8-flash', 'gemini-3.6-flash', 'gemini-3.5-flash-lite'],
+  voce:  ['gemini-3.8-flash-tts', 'gemini-3.8-flash-lite-tts', 'gemini-3.1-flash-tts-preview']
+};
+
+/* ================= UTILITÀ ================= */
+const $ = id => document.getElementById(id);
+const store = {
+  get(k, d){ try{ const v = localStorage.getItem('jarvis_'+k); return v===null ? d : v }catch(e){ return d } },
+  set(k, v){ try{ localStorage.setItem('jarvis_'+k, v) }catch(e){} }
+};
+let mode = store.get('modo', 'iron');
+let W = null, N = null;            // dati meteo e notizie
+let stopToken = 0;
+function setStatus(t){ $('status').textContent = t }
+function setState(cls){ $('reactor').className = 'reactor' + (cls ? ' '+cls : '') }
+function ora(){ return new Date().toLocaleTimeString('it-IT',{hour:'2-digit',minute:'2-digit'}) }
+function esc(s){ return String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])) }
+
+function tick(){
+  const d = new Date();
+  $('clock').firstChild.nodeValue = ora();
+  $('date').textContent = d.toLocaleDateString('it-IT',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+  const h = d.getHours();
+  $('greet').textContent = (h<5?'Buonanotte':h<13?'Buongiorno':h<18?'Buon pomeriggio':'Buonasera') + ', ' + CFG.nome + '.';
+}
+function setMode(m){
+  mode = m; store.set('modo', m);
+  $('mIron').classList.toggle('on', m==='iron');
+  $('mPro').classList.toggle('on', m==='pro');
+}
+
+/* ================= METEO (Open-Meteo, gratuito) ================= */
+const WMO = {0:['Sereno','☀️'],1:['Quasi sereno','🌤️'],2:['Poco nuvoloso','⛅'],3:['Coperto','☁️'],45:['Nebbia','🌫️'],48:['Nebbia gelata','🌫️'],
+ 51:['Pioviggine leggera','🌦️'],53:['Pioviggine','🌦️'],55:['Pioviggine intensa','🌧️'],61:['Pioggia leggera','🌦️'],63:['Pioggia','🌧️'],65:['Pioggia forte','🌧️'],
+ 66:['Pioggia gelata','🌧️'],67:['Pioggia gelata forte','🌧️'],71:['Neve leggera','🌨️'],73:['Neve','🌨️'],75:['Neve forte','❄️'],77:['Nevischio','🌨️'],
+ 80:['Rovesci leggeri','🌦️'],81:['Rovesci','🌧️'],82:['Rovesci violenti','⛈️'],85:['Rovesci di neve','🌨️'],86:['Forti rovesci di neve','❄️'],
+ 95:['Temporale','⛈️'],96:['Temporale con grandine','⛈️'],99:['Temporale con grandine forte','⛈️']};
+const wmo = c => WMO[c] || ['—','🌡️'];
+function dirVento(g){ return ['N','NE','E','SE','S','SO','O','NO'][Math.round(g/45)%8] }
+
+async function loadWeather(){
+  $('wTitle').textContent = 'METEO · ' + CFG.citta.toUpperCase();
+  const u = 'https://api.open-meteo.com/v1/forecast?latitude='+CFG.lat+'&longitude='+CFG.lon+
+    '&current=temperature_2m,apparent_temperature,weather_code,wind_speed_10m,wind_direction_10m,relative_humidity_2m'+
+    '&hourly=temperature_2m,weather_code,precipitation_probability'+
+    '&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,weather_code,sunrise,sunset'+
+    '&timezone=Europe%2FRome&forecast_days=2';
+  try{
+    const r = await fetch(u); if(!r.ok) throw new Error(r.status);
+    const d = await r.json();
+    const c = d.current, dy = d.daily;
+    const nowH = new Date().getHours();
+    const idx = d.hourly.time.findIndex(t => new Date(t).getHours() >= nowH && new Date(t).toDateString()===new Date().toDateString());
+    const ore = [];
+    for(let i = Math.max(idx,0); i < d.hourly.time.length && ore.length < 5; i += 3){
+      ore.push({h:new Date(d.hourly.time[i]).getHours(), t:Math.round(d.hourly.temperature_2m[i]), c:d.hourly.weather_code[i], p:d.hourly.precipitation_probability[i]});
+    }
+    W = {
+      ora: Math.round(c.temperature_2m), perc: Math.round(c.apparent_temperature), cielo: wmo(c.weather_code)[0], icona: wmo(c.weather_code)[1],
+      max: Math.round(dy.temperature_2m_max[0]), min: Math.round(dy.temperature_2m_min[0]), pioggia: dy.precipitation_probability_max[0],
+      vento: Math.round(c.wind_speed_10m), dir: dirVento(c.wind_direction_10m), umidita: c.relative_humidity_2m,
+      domani: { cielo: wmo(dy.weather_code[1])[0], max: Math.round(dy.temperature_2m_max[1]), min: Math.round(dy.temperature_2m_min[1]), pioggia: dy.precipitation_probability_max[1] },
+      ore
+    };
+    $('weather').className = '';
+    $('weather').innerHTML =
+      '<div class="wnow"><div style="font-size:48px">'+W.icona+'</div><div><div class="temp">'+W.ora+'°</div><div class="wdesc">'+W.cielo+' · percepiti '+W.perc+'°</div></div></div>'+
+      '<div class="wgrid"><div><b>'+W.max+'° / '+W.min+'°</b>max / min</div><div><b>'+W.pioggia+'%</b>pioggia</div><div><b>'+W.vento+' km/h</b>vento '+W.dir+'</div></div>'+
+      '<div class="hours">'+ore.map(o=>'<div>'+String(o.h).padStart(2,'0')+'<br>'+wmo(o.c)[1]+'<br>'+o.t+'°</div>').join('')+'</div>';
+  }catch(e){
+    $('weather').textContent = 'Meteo non disponibile al momento.';
+  }
+}
+
+/* ================= NOTIZIE (file aggiornato da GitHub) ================= */
+function renderList(id, arr){
+  const el = $(id);
+  if(!arr || !arr.length){ el.innerHTML = '<li class="muted">Nessuna notizia disponibile.</li>'; return }
+  el.innerHTML = arr.slice(0,5).map(n =>
+    '<li><span>'+esc(n.ora||'')+'</span><a href="'+esc(n.link)+'" target="_blank" rel="noopener">'+esc(n.titolo)+'</a></li>').join('');
+}
+async function loadNews(){
+  try{
+    const r = await fetch(CFG.newsUrl + '?t=' + Math.floor(Date.now()/300000));
+    if(!r.ok) throw new Error(r.status);
+    N = await r.json();
+    renderList('nPrime', N.sezioni.prime);
+    renderList('nCronaca', N.sezioni.cronaca);
+    renderList('nAbruzzo', N.sezioni.abruzzo);
+    if(N.aggiornato) $('sub').textContent = 'Notizie aggiornate: ' + new Date(N.aggiornato).toLocaleString('it-IT',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'});
+  }catch(e){
+    ['nPrime','nCronaca','nAbruzzo'].forEach(id => $(id).innerHTML = '<li class="muted">Notizie non ancora disponibili.</li>');
+  }
+}
+
+/* ================= GEMINI: TESTO ================= */
+function persona(){
+  return 'Sei JARVIS, l\'assistente personale di ' + CFG.nome + ', ispirato al maggiordomo digitale dei film di Iron Man. ' +
+   'Parli sempre in italiano, ti rivolgi a lui chiamandolo per nome e dandogli del Lei. Sei raffinato, preciso e leale. ' +
+   (mode==='iron'
+     ? 'Stile IRONICO: umorismo asciutto e sottile all\'inglese, battute brevi e garbate, mai volgari. '
+     : 'Stile PROFESSIONALE: sobrio, chiaro, essenziale, nessuna battuta. ') +
+   'Regole fisse: non inventare mai notizie o dati, usa solo quelli che ricevi. Sulle notizie tragiche (morti, feriti, violenze, disastri) niente ironia, solo tono rispettoso. ' +
+   'Scrivi testo da leggere ad alta voce: niente elenchi puntati, niente asterischi, niente emoji, niente link, frasi scorrevoli e paragrafi brevi separati da una riga vuota.';
+}
+async function gemini(prompt, sistema){
+  const key = store.get('key','');
+  if(!key) throw new Error('nokey');
+  let ultimoErrore;
+  for(const m of CFG.testo){
+    try{
+      const r = await fetch('https://generativelanguage.googleapis.com/v1beta/models/'+m+':generateContent?key='+encodeURIComponent(key), {
+        method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({
+          systemInstruction:{parts:[{text:sistema}]},
+          contents:[{role:'user',parts:[{text:prompt}]}],
+          generationConfig:{temperature:0.8,maxOutputTokens:4096}
+        })
+      });
+      if(!r.ok){ ultimoErrore = new Error(m+': '+r.status); continue }
+      const d = await r.json();
+      const t = (d.candidates?.[0]?.content?.parts||[]).filter(p=>p.text && !p.thought).map(p=>p.text).join('').trim();
+      if(t) return t.replace(/[*#_`]/g,'');
+    }catch(e){ ultimoErrore = e }
+  }
+  throw ultimoErrore || new Error('gemini');
+}
+
+/* ================= RAPPORTO ================= */
+function datiPerRapporto(){
+  const sez = (N && N.sezioni) || {};
+  const righe = (arr, n) => (arr||[]).slice(0,n).map(x => '- ' + x.titolo + (x.descrizione ? ' — ' + x.descrizione : '')).join('\n') || '(nessuna)';
+  return 'Ora attuale: ' + ora() + ', ' + new Date().toLocaleDateString('it-IT',{weekday:'long',day:'numeric',month:'long'}) + '.\n\n' +
+    'METEO ' + CFG.citta + ': ' + (W ? JSON.stringify(W) : 'non disponibile') + '\n\n' +
+    'PRIME PAGINE:\n' + righe(sez.prime,5) + '\n\nCRONACA NAZIONALE:\n' + righe(sez.cronaca,4) + '\n\nABRUZZO / PROVINCIA DI TERAMO:\n' + righe(sez.abruzzo,4);
+}
+function rapportoLocale(){
+  const sez = (N && N.sezioni) || {};
+  const tit = (arr,n) => (arr||[]).slice(0,n).map(x=>x.titolo).join('. ');
+  let t = 'Buongiorno, ' + CFG.nome + '. Sono le ' + ora() + '.\n\n';
+  if(W) t += 'A ' + CFG.citta + ' ci sono ' + W.ora + ' gradi, ' + W.cielo.toLowerCase() + '. Massima ' + W.max + ', minima ' + W.min + ', probabilità di pioggia ' + W.pioggia + ' per cento.\n\n';
+  if(sez.prime) t += 'In prima pagina: ' + tit(sez.prime,3) + '.\n\n';
+  if(sez.cronaca) t += 'Cronaca: ' + tit(sez.cronaca,2) + '.\n\n';
+  if(sez.abruzzo) t += 'In Abruzzo: ' + tit(sez.abruzzo,2) + '.\n\n';
+  return t + 'Fine del rapporto.';
+}
+async function rapporto(){
+  const mio = ++stopToken;
+  setState('thinking'); setStatus('ELABORO IL RAPPORTO…');
+  if(!W) await loadWeather();
+  if(!N) await loadNews();
+  let testo;
+  try{
+    testo = await gemini('Prepara il rapporto mattutino di circa 200-250 parole con questi dati. Apri con un saluto, poi meteo di oggi (e un accenno a domani), poi le notizie principali, poi la cronaca nazionale, poi quella locale. Chiudi con una frase di congedo.\n\n' + datiPerRapporto(), persona());
+  }catch(e){
+    testo = rapportoLocale();
+    if(e.message==='nokey') $('sub').textContent = 'Senza chiave Gemini leggo un rapporto semplice. Inserisca la chiave nelle impostazioni ⚙.';
+  }
+  if(mio !== stopToken) return;
+  $('report').textContent = testo;
+  store.set('ultimoRapporto', new Date().toDateString());
+  await parla(testo, mio);
+}
+
+/* ================= VOCE ================= */
+let actx = null;
+function audioCtx(){ if(!actx) actx = new (window.AudioContext||window.webkitAudioContext)(); if(actx.state==='suspended') actx.resume(); return actx }
+let sorgente = null;
+
+function pezzi(testo){
+  const par = testo.split(/\n\s*\n/).map(s=>s.trim()).filter(Boolean);
+  const out = []; let cur = '';
+  for(const p of par){ if((cur+' '+p).length < 450) cur = (cur ? cur+' ' : '') + p; else { if(cur) out.push(cur); cur = p } }
+  if(cur) out.push(cur);
+  return out;
+}
+async function ttsGemini(testo){
+  const key = store.get('key',''); if(!key) throw new Error('nokey');
+  const voce = store.get('voce','Charon') || 'Charon';
+  const stile = mode==='iron'
+    ? 'Leggi in italiano con voce maschile calma, elegante e naturale, con ironia asciutta e sottile, come un maggiordomo britannico di gran classe. Ritmo scorrevole, pause naturali: '
+    : 'Leggi in italiano con voce maschile calma, chiara e professionale, ritmo scorrevole e pause naturali: ';
+  let err;
+  for(const m of CFG.voce){
+    try{
+      const r = await fetch('https://generativelanguage.googleapis.com/v1beta/models/'+m+':generateContent?key='+encodeURIComponent(key), {
+        method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({
+          contents:[{parts:[{text: stile + testo}]}],
+          generationConfig:{responseModalities:['AUDIO'], speechConfig:{voiceConfig:{prebuiltVoiceConfig:{voiceName:voce}}}}
+        })
+      });
+      if(!r.ok){ err = new Error(m+': '+r.status); continue }
+      const d = await r.json();
+      const part = (d.candidates?.[0]?.content?.parts||[]).find(p=>p.inlineData);
+      if(part) return part.inlineData;
+    }catch(e){ err = e }
+  }
+  throw err || new Error('tts');
+}
+async function decodifica(inline){
+  const ctx = audioCtx();
+  const bin = atob(inline.data);
+  const bytes = new Uint8Array(bin.length);
+  for(let i=0;i<bin.length;i++) bytes[i] = bin.charCodeAt(i);
+  const mt = (inline.mimeType||'').toLowerCase();
+  if(mt.includes('l16') || mt.includes('pcm')){
+    const rate = parseInt((mt.match(/rate=(\d+)/)||[])[1]||'24000');
+    const n = Math.floor(bytes.length/2), dv = new DataView(bytes.buffer);
+    const buf = ctx.createBuffer(1, n, rate), ch = buf.getChannelData(0);
+    for(let i=0;i<n;i++) ch[i] = dv.getInt16(i*2, true)/32768;
+    return buf;
+  }
+  return await ctx.decodeAudioData(bytes.buffer);
+}
+function suona(buf, mio){
+  return new Promise(res => {
+    if(mio !== stopToken) return res();
+    const ctx = audioCtx();
+    sorgente = ctx.createBufferSource(); sorgente.buffer = buf; sorgente.connect(ctx.destination);
+    sorgente.onended = res; sorgente.start();
+  });
+}
+function voceAndroid(testo, mio){
+  return new Promise(res => {
+    try{
+      const s = window.speechSynthesis; if(!s || mio!==stopToken) return res();
+      const u = new SpeechSynthesisUtterance(testo);
+      u.lang='it-IT'; u.rate=1.05; u.pitch=1.0;
+      const v = s.getVoices().filter(v=>v.lang && v.lang.startsWith('it'));
+      const m = v.find(v=>/diego|giuseppe|cosimo|luca|male|uomo/i.test(v.name));
+      if(m||v[0]) u.voice = m||v[0];
+      u.onend = u.onerror = res; s.speak(u);
+    }catch(e){ res() }
+  });
+}
+async function parla(testo, mio = ++stopToken){
+  setState('speaking'); setStatus('IN TRASMISSIONE');
+  const parti = pezzi(testo);
+  let usaGemini = !!store.get('key','');
+  let prossimo = usaGemini ? ttsGemini(parti[0]).then(decodifica) : null;
+  if(prossimo) prossimo.catch(()=>{});
+  for(let i=0;i<parti.length;i++){
+    if(mio !== stopToken) break;
+    if(usaGemini){
+      try{
+        const buf = await prossimo;
+        prossimo = (i+1<parti.length) ? ttsGemini(parti[i+1]).then(decodifica) : null;
+        if(prossimo) prossimo.catch(()=>{});
+        await suona(buf, mio);
+        continue;
+      }catch(e){
+        usaGemini = false;
+        $('sub').textContent = 'Voce Gemini non disponibile ora (limite gratuito o rete): uso la voce del dispositivo.';
+      }
+    }
+    await voceAndroid(parti[i], mio);
+  }
+  if(mio === stopToken){ setState(''); setStatus('SISTEMI ONLINE') }
+}
+function ferma(){
+  stopToken++;
+  try{ if(sorgente) sorgente.stop() }catch(e){}
+  try{ speechSynthesis.cancel() }catch(e){}
+  setState(''); setStatus('SISTEMI ONLINE');
+}
+
+/* ================= COMANDI VOCALI ================= */
+function ascolta(){
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if(!SR){ setStatus('MICROFONO NON SUPPORTATO: USI CHROME'); return }
+  ferma(); audioCtx();
+  const rec = new SR(); rec.lang='it-IT'; rec.interimResults=false; rec.maxAlternatives=1;
+  setState('listening'); setStatus('LA ASCOLTO…');
+  rec.onresult = e => comando(e.results[0][0].transcript);
+  rec.onerror = () => { setState(''); setStatus('NON HO SENTITO, RIPROVI') };
+  rec.onend = () => { if($('reactor').classList.contains('listening')){ setState(''); setStatus('SISTEMI ONLINE') } };
+  rec.start();
+}
+async function comando(frase){
+  const f = frase.toLowerCase().replace(/^(ehi |ok )?jarvis[,]?\s*/,'');
+  $('report').textContent = '«' + frase + '»';
+  if(/^(stop|basta|silenzio|zitto)/.test(f)) return ferma();
+  if(/(serio|professional)/.test(f) && f.length < 30){ setMode('pro'); return parla('Modalità professionale attivata, ' + CFG.nome + '.') }
+  if(/(ironic|scherz|rilassat)/.test(f) && f.length < 30){ setMode('iron'); return parla('Modalità ironica attivata. Finalmente, ' + CFG.nome + '.') }
+  if(/rapporto|buongiorno|novità|notizie del giorno/.test(f)) return rapporto();
+  // domanda libera
+  const mio = ++stopToken;
+  setState('thinking'); setStatus('ELABORO…');
+  try{
+    const r = await gemini(
+      'Dati disponibili, usali solo se servono:\n' + datiPerRapporto() + '\n\nRichiesta di ' + CFG.nome + ': "' + frase + '"\n\n' +
+      'Rispondi in modo breve (massimo 80 parole). Se la richiesta è formulata in modo serio, urgente o preoccupato rispondi in tono professionale anche se la modalità è ironica.',
+      persona());
+    if(mio !== stopToken) return;
+    $('report').textContent = r;
+    await parla(r, mio);
+  }catch(e){
+    const msg = e.message==='nokey' ? 'Per rispondere alle domande mi serve la chiave Gemini, ' + CFG.nome + '. La inserisca nelle impostazioni.' : 'Mi scusi, ' + CFG.nome + ', non riesco a contattare i miei server in questo momento.';
+    $('report').textContent = msg; await parla(msg, mio);
+  }
+}
+
+/* ================= IMPOSTAZIONI ================= */
+function apriSet(){
+  $('sKey').value = store.get('key',''); $('sVoice').value = store.get('voce','Charon'); $('sMode').value = store.get('modo','iron');
+  $('sMsg').textContent = ''; $('settings').classList.add('open');
+}
+function salvaSet(){
+  store.set('key', $('sKey').value.trim()); store.set('voce', $('sVoice').value.trim() || 'Charon');
+  setMode($('sMode').value); $('sMsg').textContent = 'Salvato.';
+}
+$('openSet').onclick = apriSet;
+$('sClose').onclick = () => $('settings').classList.remove('open');
+$('sSave').onclick = salvaSet;
+$('sTest').onclick = () => { salvaSet(); audioCtx(); $('settings').classList.remove('open');
+  parla(mode==='iron'
+    ? 'Buongiorno, ' + CFG.nome + '. Prova voce riuscita. Le confesso che mi trovo piuttosto bene, in questo tablet.'
+    : 'Buongiorno, ' + CFG.nome + '. Prova voce completata. Sistemi operativi.'); };
+
+/* ================= AVVIO ================= */
+$('mIron').onclick = () => setMode('iron');
+$('mPro').onclick  = () => setMode('pro');
+$('play').onclick = () => { audioCtx(); rapporto() };
+$('reactor').onclick = () => { audioCtx(); rapporto() };
+$('stop').onclick = ferma;
+$('mic').onclick = ascolta;
+setMode(mode); tick(); setInterval(tick, 1000);
+Promise.all([loadWeather(), loadNews()]).then(() => {
+  const h = new Date().getHours();
+  const fatto = store.get('ultimoRapporto','') === new Date().toDateString();
+  setStatus(h < 12 && !fatto ? 'RAPPORTO PRONTO · TOCCHI IL REATTORE' : 'SISTEMI ONLINE');
+});
+setInterval(loadWeather, 30*60*1000);
+setInterval(loadNews, 30*60*1000);
+if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(()=>{});
+</script>
+</body>
+</html>
