@@ -134,6 +134,7 @@
     <label for="sVoice">Voce Gemini</label>
     <input id="sVoice" placeholder="Aoede">
     <div class="hint">Voci femminili: Aoede, Sulafat, Kore, Leda, Callirrhoe, Despina. Voci maschili: Charon, Orus, Iapetus, Algieba.</div>
+    <label><input type="checkbox" id="sDebug" style="width:auto"> Mostra dettagli tecnici del microfono</label>
     <label for="sMode">Modalità all'avvio</label>
     <select id="sMode"><option value="iron">Ironico</option><option value="pro">Professionale</option></select>
     <div class="row">
@@ -259,7 +260,7 @@ function persona(){
      ? 'Stile IRONICO: umorismo asciutto e complice, battute brevi e garbate, mai volgari. '
      : 'Stile PROFESSIONALE: sempre dando del tu, ma sobrio, chiaro, essenziale, nessuna battuta. ') +
    'Regole fisse: non inventare mai notizie o dati, usa solo quelli che ricevi. Sulle notizie tragiche (morti, feriti, violenze, disastri) niente ironia, solo tono rispettoso. ' +
-   'Scrivi testo da leggere ad alta voce: niente elenchi puntati, niente asterischi, niente emoji, niente link, frasi scorrevoli e paragrafi brevi separati da una riga vuota.';
+   'Non pronunciare mai il tuo nome. Scrivi testo da leggere ad alta voce: niente elenchi puntati, niente asterischi, niente emoji, niente link, frasi scorrevoli e paragrafi brevi separati da una riga vuota.';
 }
 function ordina(lista, tipo){
   const ok = store.get('ok_'+tipo, '');
@@ -402,8 +403,9 @@ function voceAndroid(testo, mio){
     }catch(e){ res() }
   });
 }
+let parlando = false;
 async function parla(testo, mio = ++stopToken){
-  pausaWake();
+  parlando = true;
   setState('speaking'); setStatus(store.get('key','') ? 'PREPARO LA VOCE…' : 'IN TRASMISSIONE');
   const parti = pezzi(testo);
   let usaGemini = !!store.get('key','');
@@ -426,14 +428,14 @@ async function parla(testo, mio = ++stopToken){
     }
     await voceAndroid(parti[i], mio);
   }
-  if(mio === stopToken){ setState(''); setStatus(wake ? 'IN ASCOLTO · DI\' "JARVIS"' : 'SISTEMI ONLINE'); riprendiWake() }
+  if(mio === stopToken){ parlando = false; setState(''); setStatus(wake ? 'IN ASCOLTO · DI\' "JARVIS"' : 'SISTEMI ONLINE') }
 }
 function ferma(){
   stopToken++;
   try{ if(sorgente) sorgente.stop() }catch(e){}
   try{ speechSynthesis.cancel() }catch(e){}
+  parlando = false;
   setState(''); setStatus(wake ? 'IN ASCOLTO · DI\' "JARVIS"' : 'SISTEMI ONLINE');
-  riprendiWake();
 }
 
 /* ================= COMANDI VOCALI ================= */
@@ -454,16 +456,15 @@ async function comando(frase){
   if(/^(stop|basta|silenzio|zitto)/.test(f)) return ferma();
   if(/(serio|professional)/.test(f) && f.length < 30){ setMode('pro'); return parla('Modalità professionale attivata, ' + CFG.nome + '.') }
   if(/(ironic|scherz|rilassat)/.test(f) && f.length < 30){ setMode('iron'); return parla('Modalità ironica attivata. Finalmente, ' + CFG.nome + '!') }
-  if(/rapporto|buongiorno|novità|notizie del giorno/.test(f)) return rapporto();
+  if(/\brapporto\b|notizie del giorno/.test(f)) return rapporto();
   // domanda libera
-  pausaWake();
   const mio = ++stopToken;
   setState('thinking'); setStatus('CI PENSO…');
   const t0 = Date.now();
   try{
     const r = await gemini(
       'Dati disponibili, usali solo se servono:\n' + datiPerRapporto() + '\n\nRichiesta di ' + CFG.nome + ': "' + frase + '"\n\n' +
-      'Rispondi in modo breve (massimo 80 parole). Se la richiesta è formulata in modo serio, urgente o preoccupato rispondi in tono professionale anche se la modalità è ironica.',
+      'Rispondi SOLO a questa richiesta, in modo diretto e breve (massimo 60 parole): niente saluti, niente presentazioni, niente ora o data, niente riepiloghi di meteo o notizie se non sono stati chiesti. Se la richiesta è formulata in modo serio, urgente o preoccupato rispondi in tono professionale anche se la modalità è ironica.',
       persona(), true);
     if(mio !== stopToken) return;
     $('report').textContent = r;
@@ -487,20 +488,28 @@ async function schermoAcceso(on){
 function avviaWake(){
   const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
   if(!wake || inPausa || wakeRec || !SR) return;
-  const rec = new SR(); rec.lang = 'it-IT'; rec.continuous = true; rec.interimResults = false;
+  const rec = new SR(); rec.lang = 'it-IT'; rec.continuous = true; rec.interimResults = true;
   rec.onresult = e => {
     for(let i = e.resultIndex; i < e.results.length; i++){
-      if(!e.results[i].isFinal) continue;
-      const t = e.results[i][0].transcript.trim();
-      $('sub').textContent = 'Ho sentito: «' + t + '»';
-      if(attesa){ attesa = false; comando(t); return }
+      const alt = e.results[i][0], t = alt.transcript.trim();
       const m = t.match(NOME_RE);
+      // interruzione immediata: appena sente il nome mentre parla, si zittisce
+      if(!e.results[i].isFinal){
+        if(m && (parlando || $('reactor').classList.contains('thinking'))){ ferma(); bip(); setState('listening'); setStatus('DIMMI, ' + CFG.nome.toUpperCase() + '…') }
+        continue;
+      }
+      // filtro rumori: scarta frasi incerte o troppo corte
+      if(alt.confidence > 0 && alt.confidence < 0.35){ wakeLog('scartato (incerto): «' + t + '»'); continue }
+      wakeLog('ho sentito: «' + t + '»');
       if(m){
         const resto = t.slice(m.index + m[0].length).replace(/^[\s,.!?]+/, '');
-        if(resto.length > 2){ bip(); comando(resto) }
-        else { attesa = true; bip(); setState('listening'); setStatus('DIMMI, ' + CFG.nome.toUpperCase() + '…') }
+        if(parlando) ferma();
+        if(resto.length > 2){ annullaAttesa(); bip(); comando(resto) }
+        else aspettaComando();
         return;
       }
+      if(attesa && !parlando && t.length > 2){ annullaAttesa(); comando(t); return }
+      // senza il nome: ignora (rumori, TV, sé stesso)
     }
   };
   rec.onstart = () => { wakeLog('microfono acceso, ti ascolto') };
@@ -516,8 +525,14 @@ function bip(){
     o.frequency.value = 880; g.gain.setValueAtTime(.15, c.currentTime); g.gain.exponentialRampToValueAtTime(.001, c.currentTime + .25);
     o.connect(g); g.connect(c.destination); o.start(); o.stop(c.currentTime + .25) }catch(e){}
 }
-let wakeN = 0;
-function wakeLog(t){ if(!wake) return; wakeN++; $('sub').textContent = '👂 [' + wakeN + '] ' + t }
+let wakeN = 0, timerAttesa = null;
+function wakeLog(t){ if(!wake || store.get('debug','0') !== '1') return; wakeN++; $('sub').textContent = '👂 [' + wakeN + '] ' + t }
+function aspettaComando(){
+  attesa = true; bip(); setState('listening'); setStatus('DIMMI, ' + CFG.nome.toUpperCase() + '…');
+  clearTimeout(timerAttesa);
+  timerAttesa = setTimeout(() => { if(attesa){ attesa = false; setState(''); setStatus('IN ASCOLTO · DI\' "JARVIS"') } }, 8000);
+}
+function annullaAttesa(){ attesa = false; clearTimeout(timerAttesa) }
 function pausaWake(){ inPausa = true; if(wakeRec){ try{ wakeRec.abort() }catch(e){} wakeRec = null } }
 function riprendiWake(){ inPausa = false; if(wake) setTimeout(avviaWake, 400) }
 function setWake(on){
@@ -533,11 +548,12 @@ document.addEventListener('visibilitychange', () => { if(document.visibilityStat
 
 /* ================= IMPOSTAZIONI ================= */
 function apriSet(){
-  $('sKey').value = store.get('key',''); $('sVoice').value = store.get('voce','Aoede'); $('sMode').value = store.get('modo','iron');
+  $('sKey').value = store.get('key',''); $('sVoice').value = store.get('voce','Aoede'); $('sMode').value = store.get('modo','iron'); $('sDebug').checked = store.get('debug','0') === '1';
   $('sMsg').textContent = ''; $('settings').classList.add('open');
 }
 function salvaSet(){
   store.set('key', $('sKey').value.trim()); store.set('voce', $('sVoice').value.trim() || 'Aoede');
+  store.set('debug', $('sDebug').checked ? '1' : '0');
   setMode($('sMode').value); $('sMsg').textContent = 'Salvato.';
 }
 $('sDiag').onclick = async () => {
@@ -573,7 +589,7 @@ $('sTest').onclick = () => { salvaSet(); audioCtx(); $('settings').classList.rem
 $('mIron').onclick = () => setMode('iron');
 $('mPro').onclick  = () => setMode('pro');
 $('play').onclick = () => { audioCtx(); rapporto() };
-$('reactor').onclick = () => { audioCtx(); rapporto() };
+$('reactor').onclick = () => { audioCtx(); if(parlando || $('reactor').classList.contains('thinking')) ferma(); else rapporto() };
 $('stop').onclick = ferma;
 $('mic').onclick = ascolta;
 setMode(mode); tick(); setInterval(tick, 1000);

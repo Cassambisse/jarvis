@@ -1,6 +1,6 @@
 // JARVIS - service worker: permette l'installazione come app.
 // Prende sempre la versione più recente da internet; se manca la rete usa la copia salvata.
-const CACHE = 'jarvis-v3';
+const CACHE = 'jarvis-v4';
 const FILES = ['./', './index.html', './manifest.json', './icon-192.png', './icon-512.png'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES))); self.skipWaiting(); });
 self.addEventListener('activate', e => { e.waitUntil(caches.keys().then(k => Promise.all(k.filter(x => x !== CACHE).map(x => caches.delete(x))))); self.clients.claim(); });
