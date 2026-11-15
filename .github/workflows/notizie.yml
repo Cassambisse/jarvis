@@ -1,0 +1,24 @@
+name: Notizie JARVIS
+
+on:
+  schedule:
+    - cron: "0 4,7,10,13,16,19 * * *"   # ora UTC: in inverno 5, 8, 11, 14, 17, 20 ora italiana
+  workflow_dispatch:                    # pulsante per avviarlo a mano
+
+permissions:
+  contents: write
+
+jobs:
+  aggiorna:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Scarica le notizie
+        run: python3 notizie.py
+      - name: Salva news.json
+        run: |
+          git config user.name "jarvis-bot"
+          git config user.email "jarvis-bot@users.noreply.github.com"
+          git add news.json
+          git diff --cached --quiet || git commit -m "Notizie aggiornate"
+          git push
