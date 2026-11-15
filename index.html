@@ -109,7 +109,7 @@
     </div>
     <div class="panel" style="width:100%">
       <h2>JARVIS</h2>
-      <div class="report" id="report">Tocchi il reattore per il rapporto mattutino, oppure "PARLA" per darmi un ordine.</div>
+      <div class="report" id="report">Tocca il reattore per il rapporto mattutino, oppure "PARLA" per darmi un ordine.</div>
       <div class="sub" id="sub"></div>
     </div>
   </section>
@@ -252,10 +252,10 @@ async function loadNews(){
 /* ================= GEMINI: TESTO ================= */
 function persona(){
   return 'Sei JARVIS, l\'assistente personale di ' + CFG.nome + ', ispirato al maggiordomo digitale dei film di Iron Man. ' +
-   'Parli sempre in italiano, ti rivolgi a lui chiamandolo per nome e dandogli del Lei. Sei raffinato, preciso e leale. ' +
+   'Parli sempre in italiano, ti rivolgi a lui chiamandolo per nome e dandogli sempre del tu, in modo informale e amichevole, come un amico fidato e brillante. Sei sveglio, preciso e leale. ' +
    (mode==='iron'
-     ? 'Stile IRONICO: umorismo asciutto e sottile all\'inglese, battute brevi e garbate, mai volgari. '
-     : 'Stile PROFESSIONALE: sobrio, chiaro, essenziale, nessuna battuta. ') +
+     ? 'Stile IRONICO: umorismo asciutto e complice, battute brevi e garbate, mai volgari. '
+     : 'Stile PROFESSIONALE: sempre dando del tu, ma sobrio, chiaro, essenziale, nessuna battuta. ') +
    'Regole fisse: non inventare mai notizie o dati, usa solo quelli che ricevi. Sulle notizie tragiche (morti, feriti, violenze, disastri) niente ironia, solo tono rispettoso. ' +
    'Scrivi testo da leggere ad alta voce: niente elenchi puntati, niente asterischi, niente emoji, niente link, frasi scorrevoli e paragrafi brevi separati da una riga vuota.';
 }
@@ -310,7 +310,7 @@ async function rapporto(){
     testo = await gemini('Prepara il rapporto mattutino di circa 200-250 parole con questi dati. Apri con un saluto, poi meteo di oggi (e un accenno a domani), poi le notizie principali, poi la cronaca nazionale, poi quella locale. Chiudi con una frase di congedo.\n\n' + datiPerRapporto(), persona());
   }catch(e){
     testo = rapportoLocale();
-    if(e.message==='nokey') $('sub').textContent = 'Senza chiave Gemini leggo un rapporto semplice. Inserisca la chiave nelle impostazioni ⚙.';
+    if(e.message==='nokey') $('sub').textContent = 'Senza chiave Gemini leggo un rapporto semplice. Inserisci la chiave nelle impostazioni ⚙.';
   }
   if(mio !== stopToken) return;
   $('report').textContent = testo;
@@ -413,13 +413,13 @@ async function parla(testo, mio = ++stopToken){
     }
     await voceAndroid(parti[i], mio);
   }
-  if(mio === stopToken){ setState(''); setStatus(wake ? 'IN ASCOLTO · DICA "JARVIS"' : 'SISTEMI ONLINE'); riprendiWake() }
+  if(mio === stopToken){ setState(''); setStatus(wake ? 'IN ASCOLTO · DI\' "JARVIS"' : 'SISTEMI ONLINE'); riprendiWake() }
 }
 function ferma(){
   stopToken++;
   try{ if(sorgente) sorgente.stop() }catch(e){}
   try{ speechSynthesis.cancel() }catch(e){}
-  setState(''); setStatus(wake ? 'IN ASCOLTO · DICA "JARVIS"' : 'SISTEMI ONLINE');
+  setState(''); setStatus(wake ? 'IN ASCOLTO · DI\' "JARVIS"' : 'SISTEMI ONLINE');
   riprendiWake();
 }
 
@@ -429,9 +429,9 @@ function ascolta(){
   if(!SR){ setStatus('MICROFONO NON SUPPORTATO: USI CHROME'); return }
   ferma(); pausaWake(); audioCtx();
   const rec = new SR(); rec.lang='it-IT'; rec.interimResults=false; rec.maxAlternatives=1;
-  setState('listening'); setStatus('LA ASCOLTO…');
+  setState('listening'); setStatus('TI ASCOLTO…');
   rec.onresult = e => comando(e.results[0][0].transcript);
-  rec.onerror = () => { setState(''); setStatus('NON HO SENTITO, RIPROVI') };
+  rec.onerror = () => { setState(''); setStatus('NON HO SENTITO, RIPROVA') };
   rec.onend = () => { if($('reactor').classList.contains('listening')){ setState(''); setStatus('SISTEMI ONLINE'); riprendiWake() } };
   rec.start();
 }
@@ -440,7 +440,7 @@ async function comando(frase){
   $('report').textContent = '«' + frase + '»';
   if(/^(stop|basta|silenzio|zitto)/.test(f)) return ferma();
   if(/(serio|professional)/.test(f) && f.length < 30){ setMode('pro'); return parla('Modalità professionale attivata, ' + CFG.nome + '.') }
-  if(/(ironic|scherz|rilassat)/.test(f) && f.length < 30){ setMode('iron'); return parla('Modalità ironica attivata. Finalmente, ' + CFG.nome + '.') }
+  if(/(ironic|scherz|rilassat)/.test(f) && f.length < 30){ setMode('iron'); return parla('Modalità ironica attivata. Finalmente, ' + CFG.nome + '!') }
   if(/rapporto|buongiorno|novità|notizie del giorno/.test(f)) return rapporto();
   // domanda libera
   pausaWake();
@@ -455,7 +455,7 @@ async function comando(frase){
     $('report').textContent = r;
     await parla(r, mio);
   }catch(e){
-    const msg = e.message==='nokey' ? 'Per rispondere alle domande mi serve la chiave Gemini, ' + CFG.nome + '. La inserisca nelle impostazioni.' : 'Mi scusi, ' + CFG.nome + ', non riesco a contattare i miei server in questo momento.';
+    const msg = e.message==='nokey' ? 'Per rispondere alle domande mi serve la chiave Gemini, ' + CFG.nome + '. Inseriscila nelle impostazioni.' : 'Scusa ' + CFG.nome + ', in questo momento non riesco a contattare i miei server.';
     $('report').textContent = msg; await parla(msg, mio);
   }
 }
@@ -482,7 +482,7 @@ function avviaWake(){
       if(m){
         const resto = t.slice(m.index + m[0].length).replace(/^[\s,.!?]+/, '');
         if(resto.length > 2) comando(resto);
-        else { attesa = true; parla(['Mi dica, ','Sono qui, ','A sua disposizione, '][Math.floor(Math.random()*3)] + CFG.nome + '.') }
+        else { attesa = true; parla(['Dimmi, ','Sono qui, ','Eccomi, '][Math.floor(Math.random()*3)] + CFG.nome + '.') }
         return;
       }
     }
@@ -500,7 +500,7 @@ function setWake(on){
   $('wake').textContent = on ? '👂 "JARVIS" ON' : '👂 "JARVIS" OFF';
   $('wake').classList.toggle('on', on);
   schermoAcceso(on);
-  if(on){ setStatus('IN ASCOLTO · DICA "JARVIS"'); inPausa = false; avviaWake() }
+  if(on){ setStatus('IN ASCOLTO · DI\' "JARVIS"'); inPausa = false; avviaWake() }
   else { pausaWake(); attesa = false; setStatus('SISTEMI ONLINE') }
 }
 $('wake').onclick = () => { audioCtx(); setWake(!wake) };
@@ -520,8 +520,8 @@ $('sClose').onclick = () => $('settings').classList.remove('open');
 $('sSave').onclick = salvaSet;
 $('sTest').onclick = () => { salvaSet(); audioCtx(); $('settings').classList.remove('open');
   parla(mode==='iron'
-    ? 'Buongiorno, ' + CFG.nome + '. Prova voce riuscita. Le confesso che mi trovo piuttosto bene, in questo tablet.'
-    : 'Buongiorno, ' + CFG.nome + '. Prova voce completata. Sistemi operativi.'); };
+    ? 'Ciao ' + CFG.nome + '! Prova voce riuscita. Te lo confesso: in questo tablet mi trovo piuttosto bene.'
+    : 'Ciao ' + CFG.nome + '. Prova voce completata, sistemi operativi.'); };
 
 /* ================= AVVIO ================= */
 $('mIron').onclick = () => setMode('iron');
@@ -534,8 +534,8 @@ setMode(mode); tick(); setInterval(tick, 1000);
 Promise.all([loadWeather(), loadNews()]).then(() => {
   const h = new Date().getHours();
   const fatto = store.get('ultimoRapporto','') === new Date().toDateString();
-  setStatus(h < 12 && !fatto ? 'RAPPORTO PRONTO · TOCCHI IL REATTORE' : 'SISTEMI ONLINE');
-  if(store.get('wake','0') === '1') setStatus('TOCCHI 👂 PER RIATTIVARE L\'ASCOLTO');
+  setStatus(h < 12 && !fatto ? 'RAPPORTO PRONTO · TOCCA IL REATTORE' : 'SISTEMI ONLINE');
+  if(store.get('wake','0') === '1') setStatus('TOCCA 👂 PER RIATTIVARE L\'ASCOLTO');
 });
 setInterval(loadWeather, 30*60*1000);
 setInterval(loadNews, 30*60*1000);
