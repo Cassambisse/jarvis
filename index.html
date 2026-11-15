@@ -503,17 +503,21 @@ function avviaWake(){
       }
     }
   };
+  rec.onstart = () => { wakeLog('microfono acceso, ti ascolto') };
   rec.onerror = ev => {
+    wakeLog('errore: ' + ev.error);
     if(ev.error === 'not-allowed' || ev.error === 'service-not-allowed'){ setWake(false); setStatus('PERMESSO MICROFONO NEGATO') }
   };
   rec.onend = () => { wakeRec = null; if(wake && !inPausa) setTimeout(avviaWake, 250) };
-  try{ rec.start(); wakeRec = rec }catch(e){ wakeRec = null }
+  try{ rec.start(); wakeRec = rec }catch(e){ wakeRec = null; wakeLog('avvio fallito: ' + e.message) }
 }
 function bip(){
   try{ const c = audioCtx(), o = c.createOscillator(), g = c.createGain();
     o.frequency.value = 880; g.gain.setValueAtTime(.15, c.currentTime); g.gain.exponentialRampToValueAtTime(.001, c.currentTime + .25);
     o.connect(g); g.connect(c.destination); o.start(); o.stop(c.currentTime + .25) }catch(e){}
 }
+let wakeN = 0;
+function wakeLog(t){ if(!wake) return; wakeN++; $('sub').textContent = '👂 [' + wakeN + '] ' + t }
 function pausaWake(){ inPausa = true; if(wakeRec){ try{ wakeRec.abort() }catch(e){} wakeRec = null } }
 function riprendiWake(){ inPausa = false; if(wake) setTimeout(avviaWake, 400) }
 function setWake(on){
