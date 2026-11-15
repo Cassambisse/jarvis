@@ -139,6 +139,7 @@
     <div class="row">
       <button id="sSave">SALVA</button>
       <button id="sTest">PROVA VOCE</button>
+      <button id="sDiag">DIAGNOSI</button>
       <button id="sClose">CHIUDI</button>
     </div>
     <div class="hint" id="sMsg"></div>
@@ -154,8 +155,9 @@ const CFG = {
   // file delle notizie aggiornato da GitHub ogni mattina
   newsUrl: 'https://raw.githubusercontent.com/Cassambisse/jarvis/main/news.json',
   // modelli gratuiti: se uno smette di funzionare passa al successivo
-  testo: ['gemini-3.8-flash', 'gemini-3.6-flash', 'gemini-3.5-flash-lite'],
-  voce:  ['gemini-3.8-flash-tts', 'gemini-3.8-flash-lite-tts', 'gemini-3.1-flash-tts-preview']
+  rapido: ['gemini-3.5-flash-lite', 'gemini-3.8-flash', 'gemini-3.6-flash'],   // risposte a voce
+  testo:  ['gemini-3.8-flash', 'gemini-3.6-flash', 'gemini-3.5-flash-lite'],   // rapporto mattutino
+  voce:   ['gemini-3.8-flash-lite-tts', 'gemini-3.8-flash-tts', 'gemini-3.1-flash-tts-preview']
 };
 
 /* ================= UTILITÀ ================= */
@@ -259,11 +261,16 @@ function persona(){
    'Regole fisse: non inventare mai notizie o dati, usa solo quelli che ricevi. Sulle notizie tragiche (morti, feriti, violenze, disastri) niente ironia, solo tono rispettoso. ' +
    'Scrivi testo da leggere ad alta voce: niente elenchi puntati, niente asterischi, niente emoji, niente link, frasi scorrevoli e paragrafi brevi separati da una riga vuota.';
 }
-async function gemini(prompt, sistema){
+function ordina(lista, tipo){
+  const ok = store.get('ok_'+tipo, '');
+  return ok && lista.includes(ok) ? [ok, ...lista.filter(x => x !== ok)] : lista;
+}
+async function gemini(prompt, sistema, veloce){
   const key = store.get('key','');
   if(!key) throw new Error('nokey');
   let ultimoErrore;
-  for(const m of CFG.testo){
+  const tipo = veloce ? 'rapido' : 'testo';
+  for(const m of ordina(CFG[tipo], tipo)){
     try{
       const r = await fetch('https://generativelanguage.googleapis.com/v1beta/models/'+m+':generateContent?key='+encodeURIComponent(key), {
         method:'POST', headers:{'Content-Type':'application/json'},
@@ -276,7 +283,7 @@ async function gemini(prompt, sistema){
       if(!r.ok){ ultimoErrore = new Error(m+': '+r.status); continue }
       const d = await r.json();
       const t = (d.candidates?.[0]?.content?.parts||[]).filter(p=>p.text && !p.thought).map(p=>p.text).join('').trim();
-      if(t) return t.replace(/[*#_`]/g,'');
+      if(t){ store.set('ok_'+tipo, m); return t.replace(/[*#_`]/g,'') }
     }catch(e){ ultimoErrore = e }
   }
   throw ultimoErrore || new Error('gemini');
@@ -324,8 +331,13 @@ function audioCtx(){ if(!actx) actx = new (window.AudioContext||window.webkitAud
 let sorgente = null;
 
 function pezzi(testo){
-  const par = testo.split(/\n\s*\n/).map(s=>s.trim()).filter(Boolean);
+  let par = testo.split(/\n\s*\n/).map(s=>s.trim()).filter(Boolean);
   const out = []; let cur = '';
+  // la prima frase da sola: la voce parte prima
+  if(par.length && par[0].length > 140){
+    const m = par[0].match(/^.{20,140}?[.!?](\s|$)/);
+    if(m){ out.push(m[0].trim()); par[0] = par[0].slice(m[0].length).trim(); if(!par[0]) par.shift() }
+  }
   for(const p of par){ if((cur+' '+p).length < 450) cur = (cur ? cur+' ' : '') + p; else { if(cur) out.push(cur); cur = p } }
   if(cur) out.push(cur);
   return out;
@@ -337,7 +349,7 @@ async function ttsGemini(testo){
     ? 'Leggi in italiano come una persona vera che parla a un amico: voce calda, naturale e rilassata, con un sorriso nella voce e un\'ironia sottile e complice. Ritmo scorrevole, respiri e pause naturali, intonazione varia, mai robotica: '
     : 'Leggi in italiano come una persona vera: voce calda, chiara e professionale, ritmo scorrevole, pause naturali, intonazione varia, mai robotica: ';
   let err;
-  for(const m of CFG.voce){
+  for(const m of ordina(CFG.voce, 'voce')){
     try{
       const r = await fetch('https://generativelanguage.googleapis.com/v1beta/models/'+m+':generateContent?key='+encodeURIComponent(key), {
         method:'POST', headers:{'Content-Type':'application/json'},
@@ -349,7 +361,7 @@ async function ttsGemini(testo){
       if(!r.ok){ err = new Error(m+': '+r.status); continue }
       const d = await r.json();
       const part = (d.candidates?.[0]?.content?.parts||[]).find(p=>p.inlineData);
-      if(part) return part.inlineData;
+      if(part){ store.set('ok_voce', m); return part.inlineData }
     }catch(e){ err = e }
   }
   throw err || new Error('tts');
@@ -392,7 +404,7 @@ function voceAndroid(testo, mio){
 }
 async function parla(testo, mio = ++stopToken){
   pausaWake();
-  setState('speaking'); setStatus('IN TRASMISSIONE');
+  setState('speaking'); setStatus(store.get('key','') ? 'PREPARO LA VOCE…' : 'IN TRASMISSIONE');
   const parti = pezzi(testo);
   let usaGemini = !!store.get('key','');
   let prossimo = usaGemini ? ttsGemini(parti[0]).then(decodifica) : null;
@@ -404,6 +416,7 @@ async function parla(testo, mio = ++stopToken){
         const buf = await prossimo;
         prossimo = (i+1<parti.length) ? ttsGemini(parti[i+1]).then(decodifica) : null;
         if(prossimo) prossimo.catch(()=>{});
+        setStatus('IN TRASMISSIONE');
         await suona(buf, mio);
         continue;
       }catch(e){
@@ -445,14 +458,16 @@ async function comando(frase){
   // domanda libera
   pausaWake();
   const mio = ++stopToken;
-  setState('thinking'); setStatus('ELABORO…');
+  setState('thinking'); setStatus('CI PENSO…');
+  const t0 = Date.now();
   try{
     const r = await gemini(
       'Dati disponibili, usali solo se servono:\n' + datiPerRapporto() + '\n\nRichiesta di ' + CFG.nome + ': "' + frase + '"\n\n' +
       'Rispondi in modo breve (massimo 80 parole). Se la richiesta è formulata in modo serio, urgente o preoccupato rispondi in tono professionale anche se la modalità è ironica.',
-      persona());
+      persona(), true);
     if(mio !== stopToken) return;
     $('report').textContent = r;
+    $('sub').textContent = 'Risposta scritta in ' + ((Date.now()-t0)/1000).toFixed(1) + ' s · preparo la voce…';
     await parla(r, mio);
   }catch(e){
     const msg = e.message==='nokey' ? 'Per rispondere alle domande mi serve la chiave Gemini, ' + CFG.nome + '. Inseriscila nelle impostazioni.' : 'Scusa ' + CFG.nome + ', in questo momento non riesco a contattare i miei server.';
@@ -462,7 +477,7 @@ async function comando(frase){
 
 /* ================= PAROLA DI ATTIVAZIONE "JARVIS" ================= */
 let wake = false, wakeRec = null, inPausa = false, attesa = false, wakeLock = null;
-const NOME_RE = /\b(jarvis|jarvi|giarvis|jervis|jarvys|gervis|jarviz)\b/i;
+const NOME_RE = /\b(jarvis|jarvi|jarvys|jarviz|jarbis|giarvis|giarvi|giarbis|jervis|gervis|garvis|charvis|ciarvis|darvis|davis|jervi|jarrys|harvis)\b/i;
 async function schermoAcceso(on){
   try{
     if(on && 'wakeLock' in navigator){ wakeLock = await navigator.wakeLock.request('screen') }
@@ -477,12 +492,13 @@ function avviaWake(){
     for(let i = e.resultIndex; i < e.results.length; i++){
       if(!e.results[i].isFinal) continue;
       const t = e.results[i][0].transcript.trim();
+      $('sub').textContent = 'Ho sentito: «' + t + '»';
       if(attesa){ attesa = false; comando(t); return }
       const m = t.match(NOME_RE);
       if(m){
         const resto = t.slice(m.index + m[0].length).replace(/^[\s,.!?]+/, '');
-        if(resto.length > 2) comando(resto);
-        else { attesa = true; parla(['Dimmi, ','Sono qui, ','Eccomi, '][Math.floor(Math.random()*3)] + CFG.nome + '.') }
+        if(resto.length > 2){ bip(); comando(resto) }
+        else { attesa = true; bip(); setState('listening'); setStatus('DIMMI, ' + CFG.nome.toUpperCase() + '…') }
         return;
       }
     }
@@ -492,6 +508,11 @@ function avviaWake(){
   };
   rec.onend = () => { wakeRec = null; if(wake && !inPausa) setTimeout(avviaWake, 250) };
   try{ rec.start(); wakeRec = rec }catch(e){ wakeRec = null }
+}
+function bip(){
+  try{ const c = audioCtx(), o = c.createOscillator(), g = c.createGain();
+    o.frequency.value = 880; g.gain.setValueAtTime(.15, c.currentTime); g.gain.exponentialRampToValueAtTime(.001, c.currentTime + .25);
+    o.connect(g); g.connect(c.destination); o.start(); o.stop(c.currentTime + .25) }catch(e){}
 }
 function pausaWake(){ inPausa = true; if(wakeRec){ try{ wakeRec.abort() }catch(e){} wakeRec = null } }
 function riprendiWake(){ inPausa = false; if(wake) setTimeout(avviaWake, 400) }
@@ -515,6 +536,27 @@ function salvaSet(){
   store.set('key', $('sKey').value.trim()); store.set('voce', $('sVoice').value.trim() || 'Aoede');
   setMode($('sMode').value); $('sMsg').textContent = 'Salvato.';
 }
+$('sDiag').onclick = async () => {
+  salvaSet();
+  const key = store.get('key','');
+  if(!key){ $('sMsg').textContent = 'Manca la chiave Gemini.'; return }
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  const righe = ['Microfono/riconoscimento: ' + (SR ? 'supportato' : 'NON supportato (usa Chrome)')];
+  $('sMsg').innerHTML = 'Diagnosi in corso…';
+  const prova = async (m, body) => {
+    const t0 = Date.now();
+    try{
+      const r = await fetch('https://generativelanguage.googleapis.com/v1beta/models/'+m+':generateContent?key='+encodeURIComponent(key),
+        {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(body)});
+      return m + ': ' + (r.ok ? 'OK' : 'ERRORE ' + r.status) + ' (' + ((Date.now()-t0)/1000).toFixed(1) + ' s)';
+    }catch(e){ return m + ': ERRORE rete' }
+  };
+  for(const m of [...new Set([...CFG.rapido, ...CFG.testo])])
+    righe.push(await prova(m, {contents:[{parts:[{text:'Rispondi solo: ok'}]}]}));
+  for(const m of CFG.voce)
+    righe.push(await prova(m, {contents:[{parts:[{text:'Ciao'}]}], generationConfig:{responseModalities:['AUDIO'], speechConfig:{voiceConfig:{prebuiltVoiceConfig:{voiceName: store.get('voce','Aoede')}}}}}));
+  $('sMsg').innerHTML = righe.map(esc).join('<br>');
+};
 $('openSet').onclick = apriSet;
 $('sClose').onclick = () => $('settings').classList.remove('open');
 $('sSave').onclick = salvaSet;
