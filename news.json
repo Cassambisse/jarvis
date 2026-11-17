@@ -1,151 +1,158 @@
 {
- "aggiornato": "2026-11-16T22:46:44.067596+00:00",
+ "aggiornato": "2026-11-17T12:54:30.494538+00:00",
  "sezioni": {
   "prime": [
    {
-    "titolo": "App e siti delle banche Usa in tilt dopo il caos di Microsoft e dei voli",
-    "descrizione": "Chase rassicura: 'Solo un guasto tecnico'. La Federal Reserve funziona regolarmente. La Cnn: 'Un problema iniziato a Chase e che ha avuto ricadute'",
-    "link": "https://www.ansa.it/sito/notizie/mondo/2026/11/16/app-e-siti-delle-banche-usa-in-tilt-dopo-il-caos-di-microsoft-e-dei_83dcdcf2-04de-4161-8b52-cd5eddce321d.html",
-    "ora": "16/11 22:39",
-    "ts": 1794868766.0
+    "titolo": "Gli 007 americani: 'L'Iran sta sviluppando una bomba sporca'. Teheran smentisce",
+    "descrizione": "La Casa Bianca: 'Monitoriamo ma al momento non ci sono minacce credibili'",
+    "link": "https://www.ansa.it/sito/notizie/mondo/2026/11/17/007-usa-iran-sta-sviluppando-piani-per-bomba-sporca-a-washington_187bd30b-f38c-4795-85cd-e36ed45edec5.html",
+    "ora": "17/11 12:36",
+    "ts": 1794919014.0
    },
    {
-    "titolo": "Sanchez e Lula 'uniti in difesa delle istituzioni contro la minaccia ultradestra'",
-    "descrizione": "Incontro alla Moncloa a due settimane dalle elezioni in Spagna",
-    "link": "https://www.ansa.it/sito/notizie/mondo/2026/11/16/sanchez-e-lula-uniti-in-difesa-delle-istituzioni-contro-la-minaccia-ultradestra_0af3654a-dfd4-4720-81ab-f44a7acbd51e.html",
-    "ora": "16/11 22:18",
-    "ts": 1794867539.0
+    "titolo": "Trump a Manila per il vertice con i premier di India, Giappone e Australia",
+    "descrizione": "Domani in Cina per il trilaterale coi presidenti di Cina e Russia, Xi Jinping e Vladimir Putin",
+    "link": "https://www.ansa.it/sito/notizie/mondo/2026/11/17/trump-a-manila-per-un-vertice-con-i-premier-di-india-giappone-e-australia_eb409fc3-0041-4e11-984a-6f48490ab800.html",
+    "ora": "17/11 12:19",
+    "ts": 1794917942.0
    },
    {
-    "titolo": "Atp Finals: Cobolli stecca la prima, con Medvedev una sconfitta che brucia: il russo vince in due set",
-    "descrizione": "Ora ci vuole un'impresa per le semifinali",
-    "link": "https://www.ansa.it/sito/notizie/sport/tennis/speciali/atp_finals_2026/2026/11/16/atp-finals-cobolli-stecca-la-prima-con-medvedev-una-sconfitta-che_76b3d219-b65a-44b1-8bfa-44aa29029416.html",
-    "ora": "16/11 22:06",
-    "ts": 1794866784.0
+    "titolo": "Manovra, vertice tra i leader di maggioranza. Fonti: 'Tra le le priorità l'adeguamento delle pensioni e la sanità'",
+    "descrizione": "In videoconferenza Meloni, i vicepremier, il leader di Noi Moderati e il ministro Giorgetti",
+    "link": "https://www.ansa.it/sito/notizie/politica/2026/11/17/in-corso-il-vertice-in-videoconferenza-tra-i-leader-di-maggioranza-sulla-manovra_0852cc79-1b4d-45f3-a0ff-9faa1bbaab52.html",
+    "ora": "17/11 12:17",
+    "ts": 1794917836.0
    },
    {
-    "titolo": "Il Papa lascia il suo Perù, ultima tappa di una visita storica",
-    "descrizione": "In 11 giorni seguito da 15 milioni di fedeli, un successo sulle tracce di Francesco",
-    "link": "https://www.ansa.it/vaticano/notizie/2026/11/16/il-papa-lascia-il-suo-peru-ultima-tappa-di-una-visita-storica_0b44c651-3815-40b4-8ddd-75d5bc576fc1.html",
-    "ora": "16/11 21:55",
-    "ts": 1794866127.0
+    "titolo": "Carbone: \"Dal 2021 bloccati 9 miliardi di crediti edilizi illegittimi\"",
+    "descrizione": "Oltre 12 milioni di comunicazioni nell'ambito dei controlli preventivi",
+    "link": "https://www.ansa.it/sito/notizie/economia/2026/11/17/carbone-dal-2021-bloccati-9-miliardi-di-crediti-edilizi-illegittimi-_60c9c19b-fcef-4891-9414-b38765a21726.html",
+    "ora": "17/11 12:08",
+    "ts": 1794917319.0
    },
    {
-    "titolo": "The Donald sostiene Mr. Nvidia, 'una buona idea il suo rientro'",
-    "descrizione": "E difende Lutnick. Titolo giù alla vigilia della trimestrale. Altman: 'Huang un mio eroe'",
-    "link": "https://www.ansa.it/sito/notizie/mondo/2026/11/16/the-donald-sostiene-mr.-nvidia-una-buona-idea-il-suo-rientro_df084f26-8996-46a2-927f-645ecc3fe8fe.html",
-    "ora": "16/11 21:43",
-    "ts": 1794865403.0
+    "titolo": "Polizia turca nella sede di una tv di opposizione, arrestati i dirigenti",
+    "descrizione": "Nominato un amministratore fiduciario per guidare Sozcu Tv",
+    "link": "https://www.ansa.it/sito/notizie/mondo/2026/11/17/polizia-turca-nella-sede-di-una-tv-di-opposizione-arrestati-i-dirigenti_c0dfd062-24b1-462a-bfe6-e39844e44c88.html",
+    "ora": "17/11 12:04",
+    "ts": 1794917045.0
    },
    {
-    "titolo": "Commissariata la banca Revolut, 'rapporti con indagati per mafia'",
-    "descrizione": "Decisione del Tribunale di Milano: 'Antiriciclaggio carente su transazioni per oltre 76 milioni'",
-    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/16/commissariata-la-banca-revolut-rapporti-con-indagati-per-mafia_826ace80-1187-47af-9cab-866fe3539d56.html",
-    "ora": "16/11 21:16",
-    "ts": 1794863810.0
+    "titolo": "Mattarella: \"I giovani non sono contenitori da riempire ma protagonisti\"",
+    "descrizione": "Il presidente della Repubblica: \"Hanno spirito critico e autonomo. La generazione che sale è protagonista e merita fiducia\"",
+    "link": "https://www.ansa.it/sito/notizie/politica/2026/11/17/mattarella-giovani-non-sono-contenitori-da-riempire-ma-protagonisti_76ec7d5f-c374-4318-8df9-a34429d333c9.html",
+    "ora": "17/11 12:01",
+    "ts": 1794916898.0
    },
    {
-    "titolo": "Passo indietro della Lega su quota 64. Nuovo vertice sulla manovra",
-    "descrizione": "'Ci sarà misura ad hoc'. Schillaci assicura fondi sulla sanità, la carica degli emendamenti",
-    "link": "https://www.ansa.it/sito/notizie/economia/2026/11/16/passo-indietro-della-lega-su-quota-64.-nuovo-vertice-sulla-manovra_3cb9d552-f79d-44b5-abd8-55c8263b801b.html",
-    "ora": "16/11 20:08",
-    "ts": 1794859739.0
+    "titolo": "Il Papa è rientrato a Roma da Lima: 'Auspico meno guerre e divisioni'",
+    "descrizione": "Leone: \"Una lettera di dimissioni preventive? Non c'è bisogno. Un rosario poteva colpirmi nell'occhio ma l'affetto è più forte\"",
+    "link": "https://www.ansa.it/vaticano/notizie/2026/11/17/il-papa-e-rientrato-a-roma-da-lima-dopo-midterm-mi-aspetto-meno-guerre_eaa74a43-23cc-40c3-b738-6e4b3447ad5e.html",
+    "ora": "17/11 12:00",
+    "ts": 1794916810.0
    },
    {
-    "titolo": "Chiesto l'arresto dell'ex capo della Polizia De Gennaro, il gip dice no",
-    "descrizione": "Indagato a Caltanissetta per depistaggio, l'1 dicembre l'interrogatorio",
-    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/16/la-strage-di-via-damelio-gianni-de-gennaro-indagato-per-depistaggio_f194921d-4c33-4bf6-99bc-f4bae25314ce.html",
-    "ora": "16/11 20:05",
-    "ts": 1794859520.0
+    "titolo": "Il Papa: \"Dopo il voto negli Stati Uniti, mi aspetto meno guerre e più dialogo\"",
+    "descrizione": "Sul volo verso Roma: \"Una lettera di dimissioni preventive? Per ora non ce n'è bisogno\"",
+    "link": "https://www.ansa.it/sito/videogallery/mondo/2026/11/17/il-papa-dopo-il-voto-negli-stati-uniti-mi-aspetto-meno-guerre-e-piu_d9d40830-dfd2-4741-878c-fc4d85209dc2.html",
+    "ora": "17/11 11:59",
+    "ts": 1794916776.0
    },
    {
-    "titolo": "Stefano De Martino: \"Il mio Sanremo punk con tanti indipendenti\"",
-    "descrizione": "La svolta del festival, no all'Ia e alla co-conduzione fissa",
-    "link": "https://www.ansa.it/sito/notizie/cultura/tv/2026/11/16/stefano-de-martino-il-mio-sanremo-punk-con-tanti-indipendenti_cb4a77de-0135-4933-a0f8-db9c501090b8.html",
-    "ora": "16/11 19:38",
-    "ts": 1794857890.0
+    "titolo": "L'economia del benessere da record, 4 volte più grande dell'industria farmaceutica",
+    "descrizione": "",
+    "link": "https://www.ansa.it/sito/podcast/la_tendenza_della_settimana/2026/11/17/leconomia-del-benessere-da-record-4-volte-piu-grande-dellindustria-farmaceutica_cf3eee60-e0f1-4cfb-9979-cca6b4c3544e.html",
+    "ora": "17/11 11:57",
+    "ts": 1794916676.0
    },
    {
-    "titolo": "Tre donne uccise in poche ore, si allunga la scia di sangue",
-    "descrizione": "Due di loro uccise dai mariti per la terza si cerca il figlio",
-    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/16/tre-donne-uccise-in-poche-ore-si-allunga-la-scia-di-sangue_99664bd9-d740-4a43-8c76-4fa6e93fe7ca.html",
-    "ora": "16/11 19:31",
-    "ts": 1794857508.0
+    "titolo": "Dombrovskis: 'L'Italia può uscire dalla procedura per deficit in primavera'",
+    "descrizione": "Deficit dell'Italia al 2,9% nel 2026 e al 3,5% nel 2027",
+    "link": "https://www.ansa.it/sito/notizie/economia/2026/11/17/dombrovskis-litalia-puo-uscire-dalla-procedura-per-deficit-in-primavera_a85781bf-32ba-4613-98e1-5b449c4e8475.html",
+    "ora": "17/11 11:56",
+    "ts": 1794916611.0
    }
   ],
   "cronaca": [
    {
-    "titolo": "Rapina in villa a Trieste, sequestrata e poi rilasciata una donna",
-    "descrizione": "In corso una vasta operazione per rintracciare gli aggressori",
-    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/16/rapina-in-villa-a-trieste-sequestrata-e-poi-rilasciata-una-donna_fecc58e8-512b-4a20-9f47-0ccfba8e113c.html",
-    "ora": "16/11 21:35",
-    "ts": 1794864944.0
+    "titolo": "Caso Revolut, i giudici 'I conti milionari subito svuotati e i cambi di valuta'",
+    "descrizione": "Negli atti dei pm di Milano: 'Azzeramento sistematico dei saldi e operazioni in Svizzera'",
+    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/17/caso-revolut-i-giudici-i-conti-milionari-subito-svuotati-e-i-cambi-di-valuta_93f6dafc-fb11-48ad-8e78-b46397a9b908.html",
+    "ora": "17/11 12:25",
+    "ts": 1794918340.0
    },
    {
-    "titolo": "Commissariata la banca Revolut, 'rapporti con indagati per mafia'",
-    "descrizione": "Decisione del Tribunale di Milano: 'Antiriciclaggio carente su transazioni per oltre 76 milioni'",
-    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/16/commissariata-la-banca-revolut-rapporti-con-indagati-per-mafia_826ace80-1187-47af-9cab-866fe3539d56.html",
-    "ora": "16/11 21:16",
-    "ts": 1794863810.0
+    "titolo": "88enne trovata morta in casa nel Salernitano, si sospetta un omicidio",
+    "descrizione": "Sul corpo diverse ferite di arma da taglio",
+    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/17/88enne-trovata-morta-in-casa-nel-salernitano-si-sospetta-un-omicidio_6a6e2ceb-064e-456e-9c2c-42fc465bd985.html",
+    "ora": "17/11 12:02",
+    "ts": 1794916940.0
    },
    {
-    "titolo": "Chiesto l'arresto dell'ex capo della Polizia De Gennaro, il gip dice no",
-    "descrizione": "Indagato a Caltanissetta per depistaggio, l'1 dicembre l'interrogatorio",
-    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/16/la-strage-di-via-damelio-gianni-de-gennaro-indagato-per-depistaggio_f194921d-4c33-4bf6-99bc-f4bae25314ce.html",
-    "ora": "16/11 20:05",
-    "ts": 1794859520.0
+    "titolo": "A Roma protestano docenti e studenti del liceo francese Chateaubriand",
+    "descrizione": "'Progressivo disimpegno Stato francese nei confronti della rete dell'insegnamento estero'",
+    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/17/a-roma-protestano-docenti-e-studenti-del-liceo-francese-chateaubriand_6c5d830f-2749-4c7a-8759-5721398a5e5b.html",
+    "ora": "17/11 12:02",
+    "ts": 1794916926.0
    },
    {
-    "titolo": "Tre donne uccise in poche ore, si allunga la scia di sangue",
-    "descrizione": "Due di loro uccise dai mariti per la terza si cerca il figlio",
-    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/16/tre-donne-uccise-in-poche-ore-si-allunga-la-scia-di-sangue_99664bd9-d740-4a43-8c76-4fa6e93fe7ca.html",
-    "ora": "16/11 19:31",
-    "ts": 1794857508.0
+    "titolo": "Hannoun 'non sono di Hamas, sto con i palestinesi'",
+    "descrizione": "L'architetto in udienza dal carcere al giudice, 'gli orfani sono tutti uguali'",
+    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/17/hannoun-non-sono-di-hamas-sto-con-i-palestinesi_8078ff93-d15a-4baf-800a-c5937ed4f491.html",
+    "ora": "17/11 11:58",
+    "ts": 1794916719.0
    },
    {
-    "titolo": "Ragazzina partorisce in casa di nascosto, la bimba muore",
-    "descrizione": "In provincia di Bergamo, parto prematuro. La madre minorenne ricoverata in ospedale",
-    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/16/ragazzina-partorisce-in-casa-di-nascosto-bimba-che-muore-oggi-lautopsia_659bcde1-092f-4c50-acd7-c1c5a50c33aa.html",
-    "ora": "16/11 19:30",
-    "ts": 1794857446.0
+    "titolo": "Arresti nel Foggiano, il pusher spacciava durante il ricovero in ospedale",
+    "descrizione": "Ai rifornimenti di droga provvedeva la moglie. 'Stroncato un giro d'affari da 5 milioni'",
+    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/17/arresti-nel-foggiano-il-pusher-spacciava-durante-il-ricovero-in-ospedale_0e5ac403-52b2-4594-9116-7efd53c40f64.html",
+    "ora": "17/11 11:56",
+    "ts": 1794916591.0
    },
    {
-    "titolo": "Uno studente Erasmus precipita dalle mura all'Aquila, è grave",
-    "descrizione": "Dopo essere rimasto infilzato in una recinzione. L'incidente dopo una serata con amici",
-    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/16/studente-erasmus-di-20-anni-precipita-dalle-mura-allaquila-e-grave_3d5efc0f-a537-46c0-ad4e-4c8c0bc0f685.html",
-    "ora": "16/11 18:28",
-    "ts": 1794853686.0
+    "titolo": "Imbrattata la saracinesca della nuova sede di Futuro nazionale a Firenze",
+    "descrizione": "Era accaduto anche per la prima sezione aperta nel capoluogo toscano",
+    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/17/imbrattata-la-saracinesca-della-nuova-sede-di-futuro-nazionale-a-firenze_3f899aea-bab4-4a48-80fd-88e7a45d1a02.html",
+    "ora": "17/11 11:42",
+    "ts": 1794915754.0
    },
    {
-    "titolo": "Donna trovata morta in casa nel Salernitano, non si esclude l'omicidio",
-    "descrizione": "La vittima ha 50 anni. Sequestrata la salma: rinvenute ferite d'arma da taglio",
-    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/16/donna-trovata-morta-in-casa-nel-salernitano-non-si-esclude-lomicidio_6fd45673-057f-4548-b4fb-c2e5a51ffa25.html",
-    "ora": "16/11 18:12",
-    "ts": 1794852773.0
+    "titolo": "A Salerno insegnante di 36 anni muore in ospedale, indagini sulle cause",
+    "descrizione": "L'attenzione degli inquirenti sui possibili effetti di un farmaco assunto dalla donna",
+    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/15/a-salerno-insegnante-di-36-anni-muore-in-ospedale-indagini-sulle-cause_56fbb62f-e4b8-4d1e-bc83-72031efd0dff.html",
+    "ora": "17/11 11:39",
+    "ts": 1794915597.0
    },
    {
-    "titolo": "Cede il tetto di un capannone mentre lavora, muore un operaio",
-    "descrizione": "Sempre a Rosignano anche un operaio morto per malore. Istituita la giornata Ue per vittime",
-    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/16/cede-il-tetto-di-un-capannone-mentre-lavora-muore-nel-livornese_1dc9358a-9f03-47a8-a417-e37e3ae341cd.html",
-    "ora": "16/11 18:08",
-    "ts": 1794852531.0
+    "titolo": "Ragazzina partorisce in casa bimba che muore, fascicolo per omicidio colposo",
+    "descrizione": "Domani in programma l'autopsia della neonata",
+    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/17/ragazzina-partorisce-in-casa-bimba-che-muore-fascicolo-per-omicidio-colposo_62769cc3-babd-4507-ad28-f895c1932a4a.html",
+    "ora": "17/11 11:38",
+    "ts": 1794915532.0
    },
    {
-    "titolo": "I successi, le poltrone e le ombre dello 'squalo' De Gennaro",
-    "descrizione": "Capo della Polizia, poi 007, Leonardo e il Ponte. Nuova prova per l'inaffondabile prefetto",
-    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/16/i-successi-le-poltrone-e-le-ombre-dello-squalo-de-gennaro_8bf76f4c-70ba-48e9-99af-09651774720d.html",
-    "ora": "16/11 18:03",
-    "ts": 1794852182.0
+    "titolo": "Travolti dal Natisone, comandante Vvf 'procedura soccorso era corretta'",
+    "descrizione": "Considerata anomala la chiamata alla Sores per attivare il suo elicottero",
+    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/17/travolti-dal-natisone-comandante-vvf-procedura-soccorso-era-corretta_ab5a7774-e723-46e6-bd49-74c342efae9d.html",
+    "ora": "17/11 11:30",
+    "ts": 1794915018.0
    },
    {
-    "titolo": "Nuova mail bombing alle scuole italiane, nessuna evacuazione",
-    "descrizione": "I presidi avvisano la polizia e seguono le direttiva del Viminale. Una raffica di occupazioni",
-    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/16/nuova-mail-bombing-alle-scuole-italiane-nessuna-evacuazione_868fd161-9576-4d6f-967d-dd7080f968c2.html",
-    "ora": "16/11 17:53",
-    "ts": 1794851625.0
+    "titolo": "Operaio muore travolto da un'auto mentre lavora sull'autostrada Messina-Catania",
+    "descrizione": "A-18 bloccata, indaga la Polstrada. La vittima aveva 64 anni",
+    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/17/operaio-muore-travolto-da-auto-mentre-lavora-sullautostrada-messina-catania_f5957903-50c5-4871-b9d7-ba63e03145b3.html",
+    "ora": "17/11 11:10",
+    "ts": 1794913803.0
    }
   ],
   "abruzzo": [
+   {
+    "titolo": "Medicina rigenerativa, premiato a Genova studioso dell'Università di Teramo",
+    "descrizione": "Riconoscimento ad Angelo Canciello per uno studio sul suo rapporto con l'oncologia",
+    "link": "https://www.ansa.it/abruzzo/notizie/2026/11/17/medicina-rigenerativa-premiato-a-genova-studioso-delluniversita-di-teramo_10bb8fb1-a8b7-4e10-a1ce-4640851dc202.html",
+    "ora": "17/11 10:51",
+    "ts": 1794912686.0
+   },
    {
     "titolo": "Consiglio comunale di Teramo approva vigile di quartiere e rottamazione cartelle",
     "descrizione": "Respinta invece la mozione di FdI sul taser agli agenti della Polizia locale",
@@ -189,32 +196,25 @@
     "ts": 1794493516.0
    },
    {
-    "titolo": ">ANSA-BOX/ A suppletive di Chieti vincono Campo largo e astensionismo",
-    "descrizione": "Passa Luciano D'Amico. Progressisti esultano, \"un avviso di sfratto per Marsilio\"",
-    "link": "https://www.ansa.it/abruzzo/notizie/2026/11/16/ansa-box-a-suppletive-di-chieti-vincono-campo-largo-e-astensionismo_d2eb8a2c-4d2a-4422-9f67-27b923c3ec2d.html",
-    "ora": "16/11 20:01",
-    "ts": 1794859266.0
+    "titolo": "Marsilio, restituiamo all'Aquila un simbolo della sua storia e della sua identità",
+    "descrizione": "A diciassette anni dal terremoto, il teatro 'Nazzareno De Angelis' torna alla città",
+    "link": "https://www.ansa.it/abruzzo/notizie/2026/11/17/marsilio-restituiamo-allaquila-un-simbolo-della-sua-storia-e-della-sua-identita_d41664ea-16a9-4337-936d-d07ba0ea7344.html",
+    "ora": "17/11 12:07",
+    "ts": 1794917254.0
    },
    {
-    "titolo": "Eccidio del '43 in Abruzzo 'crimine di guerra, Germania risarcisca gli eredi'",
-    "descrizione": "Il Tribunale di Lanciano riconosce la responsabilità civile della Repubblica federale",
-    "link": "https://www.ansa.it/abruzzo/notizie/2026/11/16/eccidio-del-43-in-abruzzo-crimine-di-guerra-germania-risarcisca-gli-eredi_efd0839a-e577-4ba8-8fad-d863b986252f.html",
-    "ora": "16/11 19:59",
-    "ts": 1794859174.0
+    "titolo": "Vertenza Pierburg, a Lanciano i sindacati proclamano due ore di sciopero",
+    "descrizione": "'Non accettabile arrivare il 30 all'incontro al Mimit senza impegni precisi'",
+    "link": "https://www.ansa.it/abruzzo/notizie/2026/11/17/vertenza-pierburg-a-lanciano-i-sindacati-proclamano-due-ore-di-sciopero_d67d6c62-5412-413f-9b06-b0f08c2ac271.html",
+    "ora": "17/11 11:56",
+    "ts": 1794916574.0
    },
    {
-    "titolo": "Rizzo (Italia domani), il 3,77% a Chieti e 15mila iscritti veri",
-    "descrizione": "Il leader traccia il bilancio dei primi 45 giorni del movimento",
-    "link": "https://www.ansa.it/abruzzo/notizie/2026/11/16/rizzo-italia-domani-il-377-a-chieti-e-15mila-iscritti-veri_27b17c49-4cf3-405d-866b-dd01fa0ce881.html",
-    "ora": "16/11 19:57",
-    "ts": 1794859058.0
-   },
-   {
-    "titolo": "A Chieti cartellone di qualità per la stagione di prosa del Marrucino",
-    "descrizione": "Apre il 9 gennaio \"Educazione Sentimentale\" di Ivan Cotroneo, con Giuseppe Fiorello",
-    "link": "https://www.ansa.it/abruzzo/notizie/2026/11/16/a-chieti-cartellone-di-qualita-per-la-stagione-di-prosa-del-marrucino_5c414807-8015-4b60-8714-e592aaccbc2d.html",
-    "ora": "16/11 17:23",
-    "ts": 1794849785.0
+    "titolo": "Ater L'Aquila, completato piano di manutenzione con 13,6 milioni del Pnrr",
+    "descrizione": "Riqualificati sismicamente 15 fabbricati in 7 comuni della provincia",
+    "link": "https://www.ansa.it/abruzzo/notizie/2026/11/17/ater-laquila-completato-piano-di-manutenzione-con-136-milioni-del-pnrr_09ca43f0-4255-4f58-8cd4-12013e90341c.html",
+    "ora": "17/11 10:53",
+    "ts": 1794912816.0
    }
   ]
  }
