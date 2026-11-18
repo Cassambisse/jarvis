@@ -1,151 +1,165 @@
 {
- "aggiornato": "2026-11-17T21:35:42.467928+00:00",
+ "aggiornato": "2026-11-18T12:47:36.759314+00:00",
  "sezioni": {
   "prime": [
    {
-    "titolo": "Vicenda minicar, i due minorenni trasferiti in comunità",
-    "descrizione": "Per i ragazzi la procura aveva chiesto il carcere",
-    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/17/vicenda-minicar-i-due-minorenni-trasferiti-in-comunita_002aef15-177c-4cf4-8f8e-a8c327d48a92.html",
-    "ora": "17/11 21:24",
-    "ts": 1794950671.0
+    "titolo": "Fiano lascia il Pd per il no alla legge sull'antisemitismo",
+    "descrizione": "Schlein lo chiama per fermarlo, ma il passo è irrevocabile",
+    "link": "https://www.ansa.it/sito/notizie/politica/2026/11/18/ddl-antisemitismo-le-lacrime-di-fiano-lascio-il-pd-_ad0d5ec9-32e1-477a-8239-fc0659fef573.html",
+    "ora": "18/11 12:28",
+    "ts": 1795004917.0
    },
    {
-    "titolo": "Romeo sostituito al Senato, Dreosto eletto capogruppo della Lega",
-    "descrizione": "La mossa riflette i malumori nel partito e le divisioni con i 'nordisti'",
-    "link": "https://www.ansa.it/sito/notizie/politica/2026/11/17/romeo-sostituito-al-senato-dreosto-eletto-capogruppo-della-lega_e03edd1a-4b58-4ade-aee0-ce8fdcc464c0.html",
-    "ora": "17/11 21:22",
-    "ts": 1794950552.0
+    "titolo": "Identificato il nickname Mikhail Andropov: 'Non ha mandato lui le mail nelle scuole'",
+    "descrizione": "Polizia: 'Si trova in Usa. Ha segnalato l'utilizzo improprio della sua identità digilale'",
+    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/18/identificato-nickname-mikhail-andropov-non-ha-mandato-lui-le-mail-nelle-scuole_d4f1795b-c0ab-4f23-b2fc-2a3050b7fd28.html",
+    "ora": "18/11 12:18",
+    "ts": 1795004317.0
    },
    {
-    "titolo": "L'allarme degli 007 Usa, 'Teheran vuole colpirci con una bomba sporca'",
-    "descrizione": "'Nel mirino i vertici dell'amministrazione a Washington'. Trump: 'Stiamo indagando'",
-    "link": "https://www.ansa.it/sito/notizie/mondo/2026/11/17/lallarme-degli-007-usa-teheran-vuole-colpirci-con-una-bomba_187bd30b-f38c-4795-85cd-e36ed45edec5.html",
-    "ora": "17/11 21:20",
-    "ts": 1794950428.0
+    "titolo": "Crosetto: 'Contro la guerra ibrida risorse per 6 miliardi nei prossimi anni'",
+    "descrizione": "Per il triennio 26-28 programmati quasi 2 mld, circa il 40% in più del triennio precedente. La diretta al Senato",
+    "link": "https://www.ansa.it/sito/notizie/politica/2026/11/18/crosetto-contro-la-guerra-ibrida-risorse-per-6-miliardi-nei-prossimi-anni_c8b81495-423d-42a6-aab7-030b0af8f27d.html",
+    "ora": "18/11 12:06",
+    "ts": 1795003605.0
    },
    {
-    "titolo": "'De Gennaro ossessionato da Contorno, ma non ha depistato sulle stragi'",
-    "descrizione": "Gip: 'Dall'a inchiesta nuove prospettiva sulla 'cabina di regia' dietro agli attentati del '92",
-    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/17/gip-da-indagini-nuove-prospettive-su-cabina-di-regia-dietro-stragi-92_a12dddfc-95bc-47c0-b974-53563c6a239c.html",
-    "ora": "17/11 21:17",
-    "ts": 1794950259.0
+    "titolo": "Atp Finals: nuova sconfitta per Bolelli-Vavassori, si allontanano le semifinali",
+    "descrizione": "La coppia azzurra è stata sconfitta in due set da Harrison-Skupski",
+    "link": "https://www.ansa.it/sito/notizie/sport/tennis/speciali/atp_finals_2026/2026/11/18/atp-finals-nuova-sconfitta-per-bolelli-vavassori-si-allontanano-semifinali_694f088c-a8cd-4b51-8693-7b7aaa20aa8a.html",
+    "ora": "18/11 12:04",
+    "ts": 1795003453.0
    },
    {
-    "titolo": "Caso Revolut, giudici: 'I conti milionari subito svuotati e cambi di valuta'",
-    "descrizione": "Negli atti dei pm di Milano 'azzeramento sistematico dei saldi e operazioni in Svizzera'",
-    "link": "https://www.ansa.it/sito/notizie/economia/2026/11/17/caso-revolut-giudici-i-conti-milionari-subito-svuotati-e-cambi-di-valuta_10216e69-ec19-4452-97a6-79de68939f6e.html",
-    "ora": "17/11 21:13",
-    "ts": 1794950023.0
+    "titolo": "La sorella di Andrea Pazienza al sindaco di Napoli: \"Un museo custodisca il suo murale\"",
+    "descrizione": "\"Opera molto fragile, serve una collocazione definitiva. La Mostra d'Oltremare non è adatta\"",
+    "link": "https://www.ansa.it/sito/notizie/cultura/2026/11/18/la-sorella-di-andrea-pazienza-al-sindaco-di-napoli-un-museo-custodisca-il-suo-murale_dcb51390-fa82-4dec-a752-28578a5daf4a.html",
+    "ora": "18/11 12:03",
+    "ts": 1795003413.0
    },
    {
-    "titolo": "La sala cancella ma Casa Russa conferma, è bufera sul festival a Roma",
-    "descrizione": "Il cinema Barberini: \"Troppe contestazioni\". Il nodo contrattuale",
-    "link": "https://www.ansa.it/sito/notizie/politica/2026/11/17/il-cinema-barberini-ritira-la-disponibilita-della-sala-per-il-festival-russo_7aa8073f-5242-4787-ba85-a0ff9311bd15.html",
-    "ora": "17/11 21:13",
-    "ts": 1794950007.0
+    "titolo": "Arriva la pensione dedicata per le forze dell'ordine, calcolo con fino a 4 anni in più",
+    "descrizione": "Bozza di emendamento del governo alla manovra, subito coefficiente con 2 anni in più",
+    "link": "https://www.ansa.it/sito/notizie/politica/2026/11/18/arriva-la-pensione-dedicata-per-le-forze-dellordine-calcolo-con-fino-a-4-anni_04c9d0a1-c7bc-4d02-831f-24ffa707b69a.html",
+    "ora": "18/11 11:59",
+    "ts": 1795003192.0
    },
    {
-    "titolo": "William e Kate alla consegna dei premi per l'ambiente a Mumbai",
-    "descrizione": "Il principe di Galles: 'Non possiamo dire alle nuove generazioni di non aver fatto tutto il possibile'",
-    "link": "https://www.ansa.it/sito/notizie/mondo/2026/11/17/william-e-kate-alla-consegna-dei-premi-per-lambiente-a-mumbai_41dac146-f038-42e1-8558-821b5d08503b.html",
-    "ora": "17/11 21:11",
-    "ts": 1794949887.0
+    "titolo": "Putin e Trump si stringono la mano a Shenzhen",
+    "descrizione": "Xi: \"Un mondo più stabile grazie al rapporto Pechino-Mosca\"",
+    "link": "https://www.ansa.it/sito/notizie/mondo/2026/11/18/putin-e-trump-si-stringono-la-mano-a-shenzhen_9e7135eb-3e7b-4851-bfab-d2fbdb0e6829.html",
+    "ora": "18/11 11:53",
+    "ts": 1795002799.0
    },
    {
-    "titolo": "Record di emendamenti alla manovra, la maggioranza vuole il condono",
-    "descrizione": "Vertice con Meloni: 'uniti, mantenere i conti in ordine'. Ma pensioni e banche dividono",
-    "link": "https://www.ansa.it/sito/notizie/politica/2026/11/17/record-di-emendamenti-alla-manovra-la-maggioranza-vuole-il-condono_0852cc79-1b4d-45f3-a0ff-9faa1bbaab52.html",
-    "ora": "17/11 21:05",
-    "ts": 1794949532.0
+    "titolo": "'Comandante Centcom vede il capo Idf per fare il punto in caso di ripresa della guerra'",
+    "descrizione": "Media, 'Cooper e Zamir a Tel Aviv discutono sviluppi e prontezza degli eserciti'",
+    "link": "https://www.ansa.it/sito/notizie/mondo/2026/11/18/comandante-centcom-vede-capo-idf-per-fare-il-punto-in-caso-ripresa_c716c063-4ad1-4fdb-96b8-256f5a3a08ec.html",
+    "ora": "18/11 11:39",
+    "ts": 1795001960.0
    },
    {
-    "titolo": "Apple, Gmail e Nsa down, escluso un cyberattacco ma Fbi lanciò alert",
-    "descrizione": "'Solo problemi di manutenzione di software', ma si moltiplicano i casi",
-    "link": "https://www.ansa.it/sito/notizie/mondo/nordamerica/2026/11/17/apple-segnala-problemi-per-alcuni-dei-suoi-servizi_1d347fc9-8a19-4347-9982-47d8e3c7c4fa.html",
-    "ora": "17/11 20:52",
-    "ts": 1794948765.0
+    "titolo": "Lega, Attilio Fontana: sfiducia a Romeo un errore che crea disagio, trovare uno sfogo per malumori",
+    "descrizione": "'Il disagio rimane. Ne prendo atto e sono molto dispiaciuto'",
+    "link": "https://www.ansa.it/sito/notizie/politica/2026/11/18/lega-a.fontana-sfiducia-a-romeo-un-errore-che-crea-disagio-trovare-uno_c5ba7698-b7a5-4f0f-845e-a908a6599142.html",
+    "ora": "18/11 11:24",
+    "ts": 1795001090.0
    },
    {
-    "titolo": "Mister Nvidia fa mea culpa: 'Pronto a tornare se lo vuole il board'",
-    "descrizione": "Huang rompe il silenzio nel giorno dei conti. Polemiche sulla figlia e sul marito di Alice",
-    "link": "https://www.ansa.it/sito/notizie/economia/2026/11/17/mister-nvidia-fa-mea-culpa-pronto-a-tornare-se-lo-vuole-il-board_ca04ab2c-2e9b-4bb7-b6ba-1d6938cb2d6e.html",
-    "ora": "17/11 20:50",
-    "ts": 1794948625.0
+    "titolo": "Media, con Mary Peltola i dem vincono anche in Alaska",
+    "descrizione": "Sconfitto il senatore repubblicano Dan S.Sullivan in carica da due mandati",
+    "link": "https://www.ansa.it/sito/notizie/mondo/2026/11/18/media-con-mary-peltola-i-dem-vincono-anche-in-alaska_dda72782-aa77-4765-ae43-56acdbee572d.html",
+    "ora": "18/11 11:15",
+    "ts": 1795000546.0
    }
   ],
   "cronaca": [
    {
-    "titolo": "Vicenda minicar, i due minorenni trasferiti in comunità",
-    "descrizione": "Per i ragazzi la procura aveva chiesto il carcere",
-    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/17/vicenda-minicar-i-due-minorenni-trasferiti-in-comunita_002aef15-177c-4cf4-8f8e-a8c327d48a92.html",
-    "ora": "17/11 21:24",
-    "ts": 1794950671.0
+    "titolo": "Istat: 'Aumentano gli incidenti stradali e i feriti ma calano i morti'",
+    "descrizione": "Le vittime sono diminuite del 15% rispetto al 2019",
+    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/18/istat-aumentano-gli-incidenti-stradali-e-i-feriti-ma-calano-i-morti_1c3251fa-29d5-466e-b7c7-859b2cbbc524.html",
+    "ora": "18/11 12:29",
+    "ts": 1795004976.0
    },
    {
-    "titolo": "'De Gennaro ossessionato da Contorno, ma non ha depistato sulle stragi'",
-    "descrizione": "Gip: 'Dall'a inchiesta nuove prospettiva sulla 'cabina di regia' dietro agli attentati del '92",
-    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/17/gip-da-indagini-nuove-prospettive-su-cabina-di-regia-dietro-stragi-92_a12dddfc-95bc-47c0-b974-53563c6a239c.html",
-    "ora": "17/11 21:17",
-    "ts": 1794950259.0
+    "titolo": "Capolarato nel Napoletano, 4 aziende sequestrate e 4 indagati",
+    "descrizione": "Al lavoro 7 giorni su 7, dalle 7 alle 22. Indagine di finanzieri Procura di Nola",
+    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/18/capolarato-nel-napoletano-4-aziende-sequestrate-e-4-indagati_0161c45f-636b-41a2-9cb1-68d2cb7fb94a.html",
+    "ora": "18/11 12:24",
+    "ts": 1795004646.0
    },
    {
-    "titolo": "Soffoca la moglie in casa e poi chiama 112, arrestato nel Bergamasco",
-    "descrizione": "L'allarme nel pomeriggio, vani i soccorsi. Quinto femminicidio in due giorni in Italia",
-    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/17/donna-soffocata-dal-marito-in-casa-in-provincia-di-bergamo_1d91a6f5-fbe7-4824-8b0d-e1d5cf6de88b.html",
-    "ora": "17/11 21:03",
-    "ts": 1794949439.0
+    "titolo": "Identificato il nickname Mikhail Andropov: 'Non ha mandato lui le mail nelle scuole'",
+    "descrizione": "Polizia: 'Si trova in Usa. Ha segnalato l'utilizzo improprio della sua identità digilale'",
+    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/18/identificato-nickname-mikhail-andropov-non-ha-mandato-lui-le-mail-nelle-scuole_d4f1795b-c0ab-4f23-b2fc-2a3050b7fd28.html",
+    "ora": "18/11 12:18",
+    "ts": 1795004317.0
    },
    {
-    "titolo": "Fondi Hamas: Hannoun, 'non faccio parte dell'organizzazione'",
-    "descrizione": "In udienza preliminare: 'Sto coi palestinesi'. Dal gip no alla liberazione per un altro imputato",
-    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/17/fondi-hamas-hannoun-non-faccio-parte-dellorganizzazione_ff0f1b5a-f5d4-4386-949d-b089321c9507.html",
-    "ora": "17/11 20:11",
-    "ts": 1794946305.0
+    "titolo": "Tragedia nei boschi di Savona, morti due cacciatori",
+    "descrizione": "Il più anziano avrebbe ucciso per errore il compagno e si sarebbe suicidato",
+    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/18/tragedia-nei-boschi-di-savona-morti-due-cacciatori_8509b6f6-86fb-446c-b57a-b2ed962cb70d.html",
+    "ora": "18/11 12:03",
+    "ts": 1795003390.0
    },
    {
-    "titolo": "L'addio a Michael: 'Dov'eravamo quando aveva bisogno di noi?'",
-    "descrizione": "In una chiesa gremita il parroco ricorda il ragazzo che si è tolto la vita a 15 anni",
-    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/17/lultimo-saluto-a-michael-in-chiesa-palloncini-bianchi-e-viola_e98cd421-38cb-445b-bb9d-3ab2a3f72fd2.html",
-    "ora": "17/11 19:54",
-    "ts": 1794945298.0
+    "titolo": "Domani torna maltempo al Centro-Nord, poi miglioramento generale",
+    "descrizione": "Weekend, in base a prime indicazioni, sarà bello solo a metà",
+    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/18/domani-torna-maltempo-al-centro-nord-poi-miglioramento-generale_1dc9492e-53fb-404a-a466-38c9986f6967.html",
+    "ora": "18/11 11:57",
+    "ts": 1795003027.0
    },
    {
-    "titolo": "Omicidio Bergamini, confermati 16 anni di reclusione all'ex fidanzata",
-    "descrizione": "La sorella: 'Mai fatto complotti'. La difesa ha annunciato il ricorso in Cassazione",
-    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/17/omicidio-bergamini-appello-conferma-condanna-a-16-anni-per-interno_d5b78214-b3c5-485e-baca-1ab65c0bf425.html",
-    "ora": "17/11 19:54",
-    "ts": 1794945248.0
+    "titolo": "Per sette anni hanno maltrattato i figli minorenni, arrestata coppia",
+    "descrizione": "Nell'Avellinese testimonianze dai social con filmati che hanno confermato violenze",
+    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/18/per-sette-anni-hanno-maltrattato-i-figli-minorenni-arrestata-coppia_908b4bc2-3835-49d3-beb5-ea59c43158fd.html",
+    "ora": "18/11 11:33",
+    "ts": 1795001612.0
    },
    {
-    "titolo": "Donna soffocata dal marito in casa nella Bergamasca",
-    "descrizione": "A Bossico. E' stato l'uomo ad avvisare il 112 e consegnarsi",
-    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/17/donna-soffocata-dal-marito-in-casa-nella-bergamasca_5a4a898c-0c51-4320-94a6-33272c1e36dc.html",
-    "ora": "17/11 19:47",
-    "ts": 1794944842.0
+    "titolo": "Melillo alla Commissione sulla morte di David Rossi: 'Rischio di interferenze e esposizione ai media'",
+    "descrizione": "Lettera del procuratore: 'Garantire efficacia e riservatezza delle indagini'",
+    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/18/melillo-a-commissione-sulla-morte-di-david-rossi-rischio-di-interferenze-e-esposizione-ai-media_8e00e028-5213-4339-b8a1-5c5a6c2b9095.html",
+    "ora": "18/11 11:12",
+    "ts": 1795000322.0
    },
    {
-    "titolo": "Cade dopo lo scippo della borsa, una 92enne muore a Torino",
-    "descrizione": "L'anziana aveva battuto la testa dopo l'aggressione di un uomo in bicicletta",
-    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/17/cade-dopo-lo-scippo-della-borsa-una-92enne-muore-a-torino_a0a26691-5d8d-4407-82ca-2637395f0348.html",
-    "ora": "17/11 19:31",
-    "ts": 1794943894.0
+    "titolo": "Angela Merkel tra i 'Testimoni del Tempo' dell'Acqui Storia 2027",
+    "descrizione": "Anticipazione ad Alessandria alla presentazione 'Monferrato 2026'",
+    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/18/angela-merkel-tra-i-testimoni-del-tempo-dellacqui-storia-2027_5c451f40-c146-4fae-988f-52499bd419b5.html",
+    "ora": "18/11 11:06",
+    "ts": 1794999995.0
    },
    {
-    "titolo": "Femminicidio di Luciana Ronchi, i pm: 'Dall'ex ore di appostamenti'",
-    "descrizione": "Nel processo a Morcaldi saranno mostrati i video. 'Subì 18 anni di violenze e abusi'",
-    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/17/femminicidio-di-luciana-ronchi-i-pm-da-morcaldi-ore-di-appostamenti_6a9d4577-7209-42e2-8b9e-f89ccb73da77.html",
-    "ora": "17/11 19:29",
-    "ts": 1794943744.0
+    "titolo": "Donna muore mentre attraversa la strada da auto che poi si allontana",
+    "descrizione": "L'incidente a Città di Castello, la vittima si stava recando in chiesa",
+    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/18/donna-muore-mentre-attraversa-la-strada-da-auto-che-poi-si-allontana_b3121f56-8f72-4157-a46b-0295afafdbfa.html",
+    "ora": "18/11 10:53",
+    "ts": 1794999202.0
    },
    {
-    "titolo": "Morte avvelenate, interrogati i parenti di Antonella",
-    "descrizione": "Sentiti i famigliari della donna avvelenata con la ricina. Domani investigatori a Berlino",
-    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/17/morte-avvelenate-in-corso-interrogatori-di-parenti-di-antonella-di-ielsi_ec0271ed-e840-4700-98cc-cd6d210d79e1.html",
-    "ora": "17/11 19:23",
-    "ts": 1794943422.0
+    "titolo": "'Abusi su ragazzi alla scuola militare Teulié', un docente a processo immediato",
+    "descrizione": "'Prove evidenti su violenze, umiliazioni e pressioni', salite a 18 le presunte vittime",
+    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/18/abusi-su-ragazzi-alla-scuola-militare-teulie-docente-a-processo-immediato_acbd3ca7-26a5-4b50-90e9-1ce5da6484c3.html",
+    "ora": "18/11 10:39",
+    "ts": 1794998366.0
    }
   ],
   "abruzzo": [
+   {
+    "titolo": "Onde gravitazionali, all'Aquila il racconto della prima rilevazione",
+    "descrizione": "L'astrofisico Perreca e la ricercatrice Nardi a dialogo tra scienza e filosofia",
+    "link": "https://www.ansa.it/abruzzo/notizie/2026/11/18/onde-gravitazionali-allaquila-il-racconto-della-prima-rilevazione_d5567bbe-7fc5-4d64-9540-b48cc3bfe2e4.html",
+    "ora": "18/11 12:01",
+    "ts": 1795003298.0
+   },
+   {
+    "titolo": "'D'Annunzio tra fascismo e massoneria', a Pescara storici a confronto",
+    "descrizione": "Venerdì il convegno nazionale di studi con Guerri, Patricelli e Canovi",
+    "link": "https://www.ansa.it/abruzzo/notizie/2026/11/18/dannunzio-tra-fascismo-e-massoneria-a-pescara-storici-a-confronto_06bd9553-3a2c-407a-bca8-28e7175cdfd5.html",
+    "ora": "18/11 11:43",
+    "ts": 1795002186.0
+   },
    {
     "titolo": "Pronta al Mazzini di Teramo la prima sala ibrida d'Abruzzo, sopralluogo di Marsilio",
     "descrizione": "Dotata di angiografo di ultima generazione per interventi simultanei su più patologie",
@@ -182,39 +196,25 @@
     "ts": 1794843816.0
    },
    {
-    "titolo": "Asl Pescara, con Cartella clinica elettronica gestiti 44mila ricoveri",
-    "descrizione": "Il sistema è utilizzato in 46 reparti dei tre ospedali dell'azienda",
-    "link": "https://www.ansa.it/abruzzo/notizie/2026/11/17/asl-pescara-con-cartella-clinica-elettronica-gestiti-44mila-ricoveri_d9d06125-ed93-41d4-8415-c1976bda09e8.html",
-    "ora": "17/11 20:18",
-    "ts": 1794946706.0
+    "titolo": "Condotta antisindacale e molestie, respinto l'appello di Aquila spa",
+    "descrizione": "Confermato il risarcimento di 10 mila euro alla Filcams Cgil di Chieti",
+    "link": "https://www.ansa.it/abruzzo/notizie/2026/11/18/condotta-antisindacale-e-molestie-respinto-lappello-di-aquila-spa_8cca4fdf-1d61-41c7-8e30-114d3a262be7.html",
+    "ora": "18/11 12:02",
+    "ts": 1795003329.0
    },
    {
-    "titolo": "Carabinieri, il generale Luongo alla cerimonia per 25 anni del Cna a Chieti",
-    "descrizione": "Cerimonia nella caserma \"Rebeggiani\"",
-    "link": "https://www.ansa.it/abruzzo/notizie/2026/11/17/carabinieri-il-generale-luongo-alla-cerimonia-per-25-anni-del-cna-a-chieti_b040eafb-b6bd-4e42-83b5-4d36e3eb22d9.html",
-    "ora": "17/11 20:10",
-    "ts": 1794946239.0
+    "titolo": "Ia e cybersicurezza, commissione congiunta per gli ingegneri di Chieti e L'Aquila",
+    "descrizione": "Adesioni nei primi dieci giorni di dicembre, corsi e laboratori al via nel 2027",
+    "link": "https://www.ansa.it/abruzzo/notizie/2026/11/18/ia-e-cybersicurezza-commissione-congiunta-per-gli-ingegneri-di-chieti-e-laquila_09d1fce1-ce20-4736-a450-8a0060bcb18a.html",
+    "ora": "18/11 12:01",
+    "ts": 1795003319.0
    },
    {
-    "titolo": "Famiglia nel bosco, Pillon 'in verbale audizioni incongruenze importanti'",
-    "descrizione": "Il legale a 'Cinque minuti', \"travisate le parole dei bambini, frasi scomparse\"",
-    "link": "https://www.ansa.it/abruzzo/notizie/2026/11/17/famiglia-nel-bosco-pillon-in-verbale-audizioni-incongruenze-importanti_89cc6e8c-ef11-4033-a5c7-173412b0790d.html",
-    "ora": "17/11 19:50",
-    "ts": 1794945011.0
-   },
-   {
-    "titolo": "Tartufo d'Abruzzo, il 27 inaugurazione della Fiera internazionale all'Aquila",
-    "descrizione": "Tre giorni in piazza Duomo con 60 espositori",
-    "link": "https://www.ansa.it/abruzzo/notizie/2026/11/17/tartufo-dabruzzo-il-27-inaugurazione-della-fiera-internazionale-allaquila_cb9e3e58-9acd-4a3c-a9f1-bd6e77a00d55.html",
-    "ora": "17/11 19:42",
-    "ts": 1794944556.0
-   },
-   {
-    "titolo": "Duomo dell'Aquila, oltre 36 milioni per l'intervento di restauro",
-    "descrizione": "Una riproduzione fotografica sostituisce temporaneamente la tela della finta cupola",
-    "link": "https://www.ansa.it/abruzzo/notizie/2026/11/17/duomo-dellaquila-oltre-36-milioni-per-lintervento-di-restauro_292e488e-25e9-411c-a18c-7fda75f5f00e.html",
-    "ora": "17/11 19:42",
-    "ts": 1794944554.0
+    "titolo": "Pomilio Blumm nella classifica europea delle 300 aziende in crescita",
+    "descrizione": "Ricavi in aumento del 204% tra il 2015 e il 2025. Incarico da Roma Capitale",
+    "link": "https://www.ansa.it/abruzzo/notizie/2026/11/18/pomilio-blumm-nella-classifica-europea-delle-300-aziende-in-crescita_11aec63c-6c77-45ce-8f24-3d8a16e6b935.html",
+    "ora": "18/11 12:01",
+    "ts": 1795003280.0
    }
   ]
  }
