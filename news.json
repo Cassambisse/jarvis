@@ -1,148 +1,148 @@
 {
- "aggiornato": "2026-11-25T14:00:06.366306+00:00",
+ "aggiornato": "2026-11-26T00:04:01.475923+00:00",
  "sezioni": {
   "prime": [
    {
-    "titolo": "Reputation Manager lancia S3ntinel, contro i comportamenti pericolosi sul web",
-    "descrizione": "Barchiesi: 'Non basta indignarsi, serve un'azione coordinata tra tutti gli attori'",
-    "link": "https://www.ansa.it/canale_tecnologia/notizie/cybersecurity/2026/11/25/reputation-manager-lancia-s3ntinel-contro-i-comportamenti-pericolosi-sul-web_358092c0-eefd-4878-89aa-4007ebc68a42.html",
-    "ora": "25/11 13:37",
-    "ts": 1795613850.0
+    "titolo": "Morto Andy Taylor, ex chitarrista dei Duran Duran",
+    "descrizione": "Aveva 65 anni, nel 2018 la diagnosi di cancro alla prostata",
+    "link": "https://www.ansa.it/sito/notizie/cultura/2026/11/25/morto-andy-taylor-ex-chitarrista-dei-duran-duran-_af6007f1-1f71-4392-84ac-08b6060d3c63.html",
+    "ora": "25/11 23:03",
+    "ts": 1795647804.0
    },
    {
-    "titolo": "Gli Usa propongono nuovi dazi per Cina, Ue e altri 12 paesi",
-    "descrizione": "Per Bruxelles fino al 15, per Pechino il 20%",
+    "titolo": "Sucic e Lautaro, l'Inter torna a vincere in Champions",
+    "descrizione": "Nove punti in classifica, risposta dei nerazzurri dopo il pari a Bergamo",
+    "link": "https://www.ansa.it/sito/notizie/sport/2026/11/25/sucic-e-lautaro-inter-torna-a-vincere-in-champions_11f06a25-5594-4c30-ab05-4c7f8050baad.html",
+    "ora": "25/11 22:57",
+    "ts": 1795647447.0
+   },
+   {
+    "titolo": "Coppa Davis: l'Italia soffre ma supera la Corea e conquista la semifinale",
+    "descrizione": "La vittoria col doppio di Berrettini-Vavassori, ora la sfida è con i cechi",
+    "link": "https://www.ansa.it/sito/notizie/sport/2026/11/25/coppa-davis-litalia-soffre-ma-supera-la-corea-e-conquista-la-semifinale_2c31863d-a5dc-40ff-beac-95d4f18be0f3.html",
+    "ora": "25/11 22:55",
+    "ts": 1795647329.0
+   },
+   {
+    "titolo": "Le accuse a De Luca ultimo atto di De Gennaro prima di morire",
+    "descrizione": "Altre lettere il 17 novembre. 'Sono uomo di Stato'. Testamento integrale noto dopo funerali",
+    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/25/le-lettere-di-de-gennaro-lhard-disk-non-ve-lho-dato-perche-non-avreste_990dcfdb-4804-4496-9613-4036357dd514.html",
+    "ora": "25/11 21:23",
+    "ts": 1795641838.0
+   },
+   {
+    "titolo": "Donne, potere e giusto compenso: arriva uno spettacolo teatrale con strumenti utili",
+    "descrizione": "Piacere, Potere!, come 'contrattare' anche nella coppia e negoziare sul lavoro di cura",
+    "link": "https://www.ansa.it/donne/notizie/2026/11/25/donne-potere-e-giusto-compenso-arriva-uno-spettacolo-teatrale-con-strumenti_0a272934-5083-4df0-8ce9-4e57e8aafbce.html",
+    "ora": "25/11 21:20",
+    "ts": 1795641600.0
+   },
+   {
+    "titolo": "Tg1, la cassetta con la voce del telefonista a casa dello zio di Emanuela Orlandi",
+    "descrizione": "Le registrazioni trovate durante una perquisizione due anni fa",
+    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/25/tg1-la-cassetta-con-voce-del-telefonista-a-casa-dello-zio-di-emanuela_3c3039fb-9eff-41c6-a3e9-34866e31167b.html",
+    "ora": "25/11 21:08",
+    "ts": 1795640931.0
+   },
+   {
+    "titolo": "Coppa Davis: Cobolli sconfitto, Italia-Corea del Sud 1-1",
+    "descrizione": "Soonwoo Kwon batte in tre set l'azzurro, ora decisivo il doppio",
+    "link": "https://www.ansa.it/sito/notizie/sport/tennis/speciali/coppa-davis/2026/11/25/coppa-davis-cobolli-sconfitto-italia-corea-del-sud-1-1_78ba6347-6bbb-43ee-9046-9c661c253c23.html",
+    "ora": "25/11 20:26",
+    "ts": 1795638366.0
+   },
+   {
+    "titolo": "Egitto: inferno di fuoco sulla tangenziale del Cairo, almeno 30 morti",
+    "descrizione": "Esplode un'autocisterna di petrolio nel traffico dell'ora di punta seminando il panico",
+    "link": "https://www.ansa.it/sito/notizie/mondo/2026/11/25/egitto-inferno-di-fuoco-sulla-tangenziale-del-cairo-almeno-30-morti_3d8b1b48-3476-465e-9b7e-7ae215e3b910.html",
+    "ora": "25/11 20:25",
+    "ts": 1795638357.0
+   },
+   {
+    "titolo": "Verso la retromarcia sul Superbonus, via lo spalma crediti",
+    "descrizione": "Tensione in maggioranza su pensioni e condono. Giorgetti: 'Quadro delle risorse è questo'",
+    "link": "https://www.ansa.it/sito/notizie/politica/2026/11/25/verso-la-retromarcia-sul-superbonus-via-lo-spalma-crediti_89646261-4185-4169-ae7b-46ca88eab534.html",
+    "ora": "25/11 20:15",
+    "ts": 1795637755.0
+   },
+   {
+    "titolo": "Nuova stangata di Trump sui dazi, l'Ue alza il muro. Borse in calo",
+    "descrizione": "Bruxelles avverte: 'Il tetto al 15% è una linea rossa'. Pechino: 'Manipolazione politica'",
     "link": "https://www.ansa.it/sito/notizie/mondo/2026/11/25/usa-propongono-nuovi-dazi-per-cina-ue-e-altri-12-paesi_7b5dc39c-cbf2-4816-91bd-81f56b44833b.html",
-    "ora": "25/11 13:36",
-    "ts": 1795613813.0
-   },
-   {
-    "titolo": "Lorena Isceri, panchine rosse sul tratto della A1 dove è stata uccisa la 45enne",
-    "descrizione": "Iniziativa di Autostrade per l'Italia che sostiene l'associazione intitolata alla vittima",
-    "link": "https://www.ansa.it/sito/videogallery/italia/2026/11/25/lorena-isceri-panchine-rosse-sul-tratto-della-a1-dove-e-stata-uccisa_984db1fe-5080-4c7e-8501-1eac609341e6.html",
-    "ora": "25/11 13:29",
-    "ts": 1795613357.0
-   },
-   {
-    "titolo": "Il doppio volto dell'IA, tra sessismo e lotta alla violenza di genere",
-    "descrizione": "",
-    "link": "https://www.ansa.it/sito/podcast/frida/2026/11/25/il-doppio-volto-dellia-tra-sessismo-e-lotta-alla-violenza-di-genere_9fda1f10-6a71-4fa9-b534-cf89a988da37.html",
-    "ora": "25/11 13:06",
-    "ts": 1795612000.0
-   },
-   {
-    "titolo": "Capotreno ucciso, Marin Jelenic condannato all'ergastolo",
-    "descrizione": "A Bologna la sentenza per l'omicidio di Alessandro Ambrosio",
-    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/25/capotreno-ucciso-condannato-allergastolo-marin-jelenic_f03c0c0a-5dec-448a-bec0-b52f5d273371.html",
-    "ora": "25/11 12:48",
-    "ts": 1795610907.0
-   },
-   {
-    "titolo": "È online MinervaE, l'IA italiana che 'ragiona' e sfida i modelli stranieri",
-    "descrizione": "Sapienza e Babelscape pubblicano il nuovo modello che primeggia sulla cultura italiana",
-    "link": "https://www.ansa.it/canale_tecnologia/notizie/future_tech/2026/11/25/e-online-minervae-lia-italiana-che-ragiona-e-sfida-i-modelli-stranieri_c4e838f1-a5c9-4fe5-b494-0b319dfb338d.html",
-    "ora": "25/11 12:26",
-    "ts": 1795609608.0
-   },
-   {
-    "titolo": "La Knesset approva in lettura preliminare la commissione statale sul 7 ottobre",
-    "descrizione": "Israele, Change bloc punta a insediare un nuovo governo mercoledì prossimo",
-    "link": "https://www.ansa.it/sito/notizie/mondo/2026/11/25/israele-change-bloc-punta-a-insediare-un-nuovo-governo-mercoledi-prossimo_d382b6df-0b01-413e-94f9-859e88c479f3.html",
-    "ora": "25/11 12:19",
-    "ts": 1795609198.0
-   },
-   {
-    "titolo": "Bce: 'Nel 2026 sorpasso dei pagamenti con carta sul contante nei negozi europei'",
-    "descrizione": "Sono il 45% contro il 44%. Cipollone: 'Ciò che importa ai cittadini è poter scegliere'",
-    "link": "https://www.ansa.it/sito/notizie/economia/2026/11/25/bce-nel-2026-sorpasso-dei-pagamenti-con-carta-sul-contante_6c5aea6e-f915-4a62-921c-c335159214c7.html",
-    "ora": "25/11 12:14",
-    "ts": 1795608862.0
-   },
-   {
-    "titolo": "Istat: 'Una donna su 3 ha subito almeno una violenza nella vita'",
-    "descrizione": "Il report, sono circa 7 milioni dai 16 ai 75 anni, il 31,5% del totale. Dal 2014 in aumento le violenze subite dalle giovanissime",
-    "link": "https://www.ansa.it/sito/notizie/speciali/25-novembre/2026/11/25/istat-una-donna-su-3-ha-subito-almeno-una-violenza-nella-vita_b4c4fa56-2311-40d7-a10e-05c7a9ef2b66.html",
-    "ora": "25/11 11:56",
-    "ts": 1795607770.0
-   },
-   {
-    "titolo": "25 Novembre, camminata in rosso a Torino contro la violenza sulle donne",
-    "descrizione": "In occasione della Giornata internazionale per l'eliminazione della violenza contro le donne",
-    "link": "https://www.ansa.it/sito/notizie/speciali/25-novembre/2026/11/25/violenza-sulle-donne-camminata-in-rosso-a-torino_affca421-42bf-40c1-aa3f-8f071ca4a2ab.html",
-    "ora": "25/11 11:55",
-    "ts": 1795607718.0
+    "ora": "25/11 20:11",
+    "ts": 1795637517.0
    }
   ],
   "cronaca": [
    {
-    "titolo": "Rabbino aggredito, il Tribunale sospende l'espulsione del ragazzo condannato",
-    "descrizione": "Il 20enne esce dal Cpr di Milano dove era stato portato dopo la sentenza il 12 novembre",
-    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/25/rabbino-aggredito-il-tribunale-sospende-lespulsione-del-ragazzo-condannato_64f3e876-904a-4b4c-b494-3720587671b8.html",
-    "ora": "25/11 13:34",
-    "ts": 1795613690.0
+    "titolo": "Le accuse a De Luca ultimo atto di De Gennaro prima di morire",
+    "descrizione": "Altre lettere il 17 novembre. 'Sono uomo di Stato'. Testamento integrale noto dopo funerali",
+    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/25/le-lettere-di-de-gennaro-lhard-disk-non-ve-lho-dato-perche-non-avreste_990dcfdb-4804-4496-9613-4036357dd514.html",
+    "ora": "25/11 21:23",
+    "ts": 1795641838.0
    },
    {
-    "titolo": "Cosche volevano assaltare Tribunale Locri per recuperare droga e denaro",
-    "descrizione": "Piano scoperto in inchiesta Ros e Dda Reggio Calabria che ha portato a 33 arresti",
-    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/25/cosche-volevano-assaltare-tribunale-locri-per-recuperare-droga-e-denaro_e515b7b7-d296-4e8d-903b-20081f0248c4.html",
-    "ora": "25/11 13:31",
-    "ts": 1795613491.0
+    "titolo": "Mafia-appalti e pista nera, i filoni che dividono l'Antimafia",
+    "descrizione": "De Luca: su eversione 'zero tagliato'. Conte: 'vogliono nascondere le parole di De Gennaro'",
+    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/25/mafia-appalti-e-pista-nera-i-filoni-che-dividono-lantimafia_83a47608-ef12-4d85-ab0f-695ce54083d5.html",
+    "ora": "25/11 21:21",
+    "ts": 1795641680.0
    },
    {
-    "titolo": "Il trapper Baby Gang attacca sui social un ex amico che collabora con i pm",
-    "descrizione": "'Infame, mente sulle armi'. Lo ha accusato di essere un canale di approvvigionamento",
-    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/25/il-trapper-baby-gang-attacca-sui-social-un-ex-amico-che-collabora-con_787d7a7a-dc1d-47d0-9df5-72f598fd97e8.html",
-    "ora": "25/11 13:30",
-    "ts": 1795613409.0
+    "titolo": "Tg1, cassetta con voce telefonista a casa dello zio di Emanuela Orlandi",
+    "descrizione": "Le registrazioni trovate durante una perquisizione due anni fa",
+    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/25/tg1-cassetta-con-voce-telefonista-a-casa-dello-zio-di-emanuela-orlandi_2e426460-f25a-4dbb-a5ef-612d907cf25c.html",
+    "ora": "25/11 21:09",
+    "ts": 1795640956.0
    },
    {
-    "titolo": "Capotreno ucciso, Marin Jelenic condannato all'ergastolo",
-    "descrizione": "A Bologna la sentenza per l'omicidio di Alessandro Ambrosio",
-    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/25/capotreno-ucciso-condannato-allergastolo-marin-jelenic_f03c0c0a-5dec-448a-bec0-b52f5d273371.html",
-    "ora": "25/11 12:48",
-    "ts": 1795610907.0
+    "titolo": "Tg1, la cassetta con la voce del telefonista a casa dello zio di Emanuela Orlandi",
+    "descrizione": "Le registrazioni trovate durante una perquisizione due anni fa",
+    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/25/tg1-la-cassetta-con-voce-del-telefonista-a-casa-dello-zio-di-emanuela_3c3039fb-9eff-41c6-a3e9-34866e31167b.html",
+    "ora": "25/11 21:08",
+    "ts": 1795640931.0
    },
    {
-    "titolo": "Anthropic ha radici in Maremma, documento certifica origini padre Amodei",
-    "descrizione": "Settimanale Toscana Oggi pubblica atto battesimo, custodito in parrocchia di Follonica",
-    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/25/anthropic-ha-radici-in-maremma-documento-certifica-origini-padre-amodei_a77427a6-a3ea-4a06-b739-be70b8f7c3f3.html",
-    "ora": "25/11 12:31",
-    "ts": 1795609873.0
+    "titolo": "Migliaia in piazza Duomo a Milano per Non una di meno",
+    "descrizione": "In corteo anche la consigliera regionale del Pd 'zittita' da collega di FdI",
+    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/25/migliaia-in-piazza-duomo-a-milano-per-non-una-di-meno_734dfc18-e922-45aa-9da4-559c2bc662b7.html",
+    "ora": "25/11 20:49",
+    "ts": 1795639761.0
    },
    {
-    "titolo": "Commissione Viminale valuterà se riattivare protezione al pentito Contorno",
-    "descrizione": "Ora 80enne, indirizzo svelato negli atti dell'inchiesta che coinvolge anche De Gennaro",
-    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/25/commissione-viminale-valutera-se-riattivare-protezione-al-pentito-contorno_01586d85-49fc-4f1a-bc43-ee79adb65223.html",
-    "ora": "25/11 12:25",
-    "ts": 1795609552.0
+    "titolo": "Ranucci 5 ore dai pm, 'chiarito tutto, mi costituirò parte civile'",
+    "descrizione": "Il legale: 'ha interesse a che si faccia piena luce'",
+    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/25/ranucci-5-ore-dai-pm-chiarito-tutto-mi-costituiro-parte-civile_64de3f6e-c840-4639-88d0-2576bb5908c1.html",
+    "ora": "25/11 20:23",
+    "ts": 1795638226.0
    },
    {
-    "titolo": "Sea Watch, 'software-spia contro la nostra portavoce Giorgia Linardi'",
-    "descrizione": "'Sorvegliata per almeno due mesi, denuncia alla procura di Roma'",
-    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/25/sea-watch-software-spia-contro-la-nostra-portavoce-giorgia-linardi_31023a66-eb63-489a-993f-35f0bfaaefab.html",
-    "ora": "25/11 12:25",
-    "ts": 1795609501.0
+    "titolo": "Ranucci cinque ore dai pm, 'mi costituirò parte civile'",
+    "descrizione": "Sentito come teste nell'indagine su attentato. Si va verso giudizio immediato per Lavitola",
+    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/25/attentato-a-ranucci-il-giornalista-in-procura-per-essere-ascoltato_7c894a9f-65f3-4154-b575-535161bd902c.html",
+    "ora": "25/11 20:15",
+    "ts": 1795637714.0
    },
    {
-    "titolo": "A Torino il festival che scardina i pregiudizi sulla disabilità",
-    "descrizione": "DisFestival 2026, \"Umano Non Umano: l'importanza di sbagliare\"",
-    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/25/a-torino-il-festival-che-scardina-i-pregiudizi-sulla-disabilita_19479397-892a-4f54-b7e5-344f132c6bb7.html",
-    "ora": "25/11 11:54",
-    "ts": 1795607676.0
+    "titolo": "#AccadeOggi",
+    "descrizione": "I principali avvenimenti previsti per la giornata",
+    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/25/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html",
+    "ora": "25/11 19:08",
+    "ts": 1795633716.0
    },
    {
-    "titolo": "Vendita San Siro, la Cassazione restituisce telefoni e pc a ex dirigente Inter",
-    "descrizione": "Annullato sequestro nelle indagini così come era accaduto per ex dg del Comune di Milano",
-    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/25/vendita-san-siro-la-cassazione-restituisce-telefoni-e-pc-a-ex-dirigente-inter_e05ae667-098d-473e-acbf-46494b80d34e.html",
-    "ora": "25/11 11:37",
-    "ts": 1795606671.0
+    "titolo": "In treno minaccia per telefono l'ex compagna, agente fuori servizio lo fa arrestare",
+    "descrizione": "Indagini scoprono violenze e persecuzioni confermate dalla vittima",
+    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/25/in-treno-minaccia-per-telefono-lex-compagna-agente-fuori-servizio-lo-fa-arrestare_bf672e8a-cd4d-4e4e-b753-7b4f0d2ca39c.html",
+    "ora": "25/11 19:01",
+    "ts": 1795633288.0
    },
    {
-    "titolo": "Anziana morta dopo scippo a Torino, fermato il presunto autore",
-    "descrizione": "E' un uomo di 50 anni, le accuse rapina e omicidio preterintenzionale",
-    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/25/anziana-morta-dopo-scippo-a-torino-fermato-il-presunto-autore_eeaf96c6-a438-42ea-a555-c6c0ae02bc99.html",
-    "ora": "25/11 10:55",
-    "ts": 1795604146.0
+    "titolo": "Violenza sulle donne, installazione in piazza Duomo a Firenze",
+    "descrizione": "Scultura di Anna Izzo resterà fino al 30 novembre",
+    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/25/violenza-sulle-donne-installazione-in-piazza-duomo-a-firenze_17a1f6ca-7d95-4fc2-a5b9-d438208ca00d.html",
+    "ora": "25/11 18:55",
+    "ts": 1795632935.0
    }
   ],
   "abruzzo": [
@@ -168,53 +168,53 @@
     "ts": 1795283021.0
    },
    {
-    "titolo": "A Teramo in 3mila al corteo Cgil, in piazza lavoratori, politica e studenti",
-    "descrizione": "Partita dalla stazione la manifestazione ha triplicato le presenze fino a piazza Martiri",
-    "link": "https://www.ansa.it/abruzzo/notizie/2026/11/20/a-teramo-in-3mila-al-corteo-cgil-in-piazza-lavoratori-politica-e-studenti_0574fac3-df41-42e4-b813-f291f749e6f3.html",
-    "ora": "20/11 16:59",
-    "ts": 1795193982.0
+    "titolo": "Violenza donne: Marsilio, impegno quotidiano che coinvolga l'intera comunità",
+    "descrizione": "",
+    "link": "https://www.ansa.it/abruzzo/notizie/2026/11/25/violenza-donne-marsilio-impegno-quotidiano-che-coinvolga-lintera-comunita_5522f8a3-8870-4d17-af3c-914c10671e4d.html",
+    "ora": "25/11 20:31",
+    "ts": 1795638708.0
    },
    {
-    "titolo": "Alberi monumentali, l'Abruzzo sale a 346 esemplari",
-    "descrizione": "Assessore Imprudente, 'patrimonio e opportunità per le comunità'",
-    "link": "https://www.ansa.it/abruzzo/notizie/2026/11/20/alberi-monumentali-labruzzo-sale-a-346-esemplari_1adf74d3-b333-461d-a168-419cd75e2c0b.html",
-    "ora": "20/11 15:22",
-    "ts": 1795188167.0
+    "titolo": "Ruba soldi a un passante nel centro di Pescara, arrestato 21enne",
+    "descrizione": "La vittima lo insegue, poi l'intervento della polizia. Ora è in carcere",
+    "link": "https://www.ansa.it/abruzzo/notizie/2026/11/25/ruba-soldi-a-un-passante-nel-centro-di-pescara-arrestato-21enne_2196c438-8e7d-4335-a4db-9fda547f5a4a.html",
+    "ora": "25/11 20:29",
+    "ts": 1795638550.0
    },
    {
-    "titolo": "All'aeroporto d'Abruzzo l'AI regola la climatizzazione, -10% sui consumi",
-    "descrizione": "Ecco i risultati dei primi mesi di attività, durante la stagione estiva",
-    "link": "https://www.ansa.it/abruzzo/notizie/2026/11/25/allaeroporto-dabruzzo-lai-regola-la-climatizzazione-10-sui-consumi_b8a53dde-bcca-43a6-be66-1ec3ae30d3c7.html",
-    "ora": "25/11 13:16",
-    "ts": 1795612580.0
+    "titolo": "Isringhausen perde commessa nuovo Ducato, Stellantis assente al tavolo",
+    "descrizione": "Sindacati chiedono risposte entro una settimana. Produzione confermata fino al 2030",
+    "link": "https://www.ansa.it/abruzzo/notizie/2026/11/25/isringhausen-perde-commessa-nuovo-ducato-stellantis-assente-al-tavolo_f9d8206b-58d9-4a75-910d-b5776beccf13.html",
+    "ora": "25/11 20:28",
+    "ts": 1795638518.0
    },
    {
-    "titolo": "False fatture e crediti d'imposta indebiti, sequestri per 12,5 milioni",
-    "descrizione": "Gdf Pescara esegue provvedimenti per 18 persone e 13 aziende",
-    "link": "https://www.ansa.it/abruzzo/notizie/2026/11/25/false-fatture-e-crediti-dimposta-indebiti-sequestri-per-125-milioni_7bcdb343-c402-42f8-9526-82d51ba3c212.html",
-    "ora": "25/11 13:04",
-    "ts": 1795611872.0
+    "titolo": "All'Aquila Artemisia Gentileschi in prima nazionale per il 25 novembre",
+    "descrizione": "La rievocazione del processo alla pittrice è l'occasione per parlare di violenza di genere",
+    "link": "https://www.ansa.it/abruzzo/notizie/2026/11/25/allaquila-artemisia-gentileschi-in-prima-nazionale-per-il-25-novembre_7d56efca-fb3e-4f50-ac59-32cfe06a6713.html",
+    "ora": "25/11 20:26",
+    "ts": 1795638372.0
    },
    {
-    "titolo": "Marsilio 'più fondi con Meloni, ora revisione Piani di rientro'",
-    "descrizione": "Il presidente della Regione Abruzzo al 'Forum Risk Management in Sanità' di Arezzo",
-    "link": "https://www.ansa.it/abruzzo/notizie/2026/11/24/sanita-marsilio-piu-fondi-con-meloni-ora-revisione-piani-di-rientro_abccd6d7-b8ed-4897-aaf9-60ef4ddeac26.html",
-    "ora": "25/11 11:37",
-    "ts": 1795606650.0
+    "titolo": "Contro la violenza alle donne, anche i supermercati diventano punti viola",
+    "descrizione": "In tutto 73 negozi Coop Alleanza 3.0, 70mila euro donati a 34 centri antiviolenza",
+    "link": "https://www.ansa.it/abruzzo/notizie/2026/11/25/contro-la-violenza-alle-donne-anche-i-supermercati-diventano-punti-viola_9bd7e39c-3181-4db2-b239-c22adf1c2a05.html",
+    "ora": "25/11 20:25",
+    "ts": 1795638331.0
    },
    {
-    "titolo": "Di Girolamo (M5S), serve subito una proroga-ponte per i tribunali abruzzesi",
-    "descrizione": "'Il rinvio dell'esame sul ddl sul riordino schiaffo in faccia al territorio'",
-    "link": "https://www.ansa.it/abruzzo/notizie/2026/11/25/di-girolamo-m5s-serve-subito-una-proroga-ponte-per-i-tribunali-abruzzesi_0f0e208c-c5a1-4ff4-8546-d7698219a886.html",
-    "ora": "25/11 11:29",
-    "ts": 1795606155.0
+    "titolo": "Scontro tra quattro auto sull'A24, un morto e un ferito nella Marsica",
+    "descrizione": "L'incidente al chilometro 61 in direzione Roma",
+    "link": "https://www.ansa.it/abruzzo/notizie/2026/11/25/scontro-tra-quattro-auto-sulla24-un-morto-e-un-ferito-nella-marsica_4937e9a4-5fa1-4714-b518-17f602764c4d.html",
+    "ora": "25/11 20:25",
+    "ts": 1795638305.0
    },
    {
-    "titolo": "Gambero Rosso, è abruzzese il 'Pasticcere emergente' d'Italia",
-    "descrizione": "È Danny Zazzini, 39enne di Francavilla al Mare, fondatore di 'Moer' a Lanciano",
-    "link": "https://www.ansa.it/canale_terraegusto/notizie/regioni/abruzzo/2026/11/24/gambero-rosso-e-abruzzese-il-pasticcere-emergente-ditalia_4ac94c80-bf28-4bef-a433-bbea0bf64169.html",
-    "ora": "25/11 09:59",
-    "ts": 1795600783.0
+    "titolo": "A Pietrasecca una panchina rossa contro la violenza sulle donne",
+    "descrizione": "Sullo schienale una targa con il numero antiviolenza 1522",
+    "link": "https://www.ansa.it/abruzzo/notizie/2026/11/25/a-pietrasecca-una-panchina-rossa-contro-la-violenza-sulle-donne_a9fbf3e3-bd73-4f6b-a071-c8abd2b8b87e.html",
+    "ora": "25/11 20:23",
+    "ts": 1795638215.0
    }
   ]
  }
