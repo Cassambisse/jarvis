@@ -1,151 +1,165 @@
 {
- "aggiornato": "2026-11-26T13:40:03.231737+00:00",
+ "aggiornato": "2026-11-27T00:24:35.464314+00:00",
  "sezioni": {
   "prime": [
    {
-    "titolo": "++ Attacco in Kuwait, anche due italiani tra i feriti ++",
-    "descrizione": "",
-    "link": "https://www.ansa.it/sito/notizie/flash/2026/11/26/-attacco-in-kuwait-anche-due-italiani-tra-i-feriti-_851b7d21-5e07-4a8f-91ee-cc918d6cabf3.html",
-    "ora": "26/11 13:27",
-    "ts": 1795699627.0
+    "titolo": "La Spagna al voto, Sanchez attacca Pp e Vox",
+    "descrizione": "Abascal: 'Ceuta è sfera di cristallo del futuro del Paese se continuate a governare'",
+    "link": "https://www.ansa.it/sito/notizie/mondo/europa/2026/11/26/la-spagna-al-voto-ultima-sfida-in-tv-tra-il-blocco-progressista-e-le-destre_16e91653-bfa6-450d-8daf-d5d5b3b5ef9e.html",
+    "ora": "26/11 23:26",
+    "ts": 1795735608.0
    },
    {
-    "titolo": "Musk si è impegnato a donare a ogni bambino degli Stati Uniti due azioni di SpaceX",
-    "descrizione": "Luce verde della autorità a 'Starmind', un milione di satelliti per il datacenter IA",
-    "link": "https://www.ansa.it/sito/notizie/mondo/2026/11/26/musk-rilancia-due-azioni-spacex-per-ogni-bambino-usa_20af847c-e0d8-4319-9080-84050c64e2e0.html",
-    "ora": "26/11 13:18",
-    "ts": 1795699113.0
+    "titolo": "Accordo per De Cos alla Bce, ma è muro contro muro sul bilancio Ue",
+    "descrizione": "Via libera dei 27 allo spagnolo. Resta lo scontro tra modernizzatori e coesionisti",
+    "link": "https://www.ansa.it/sito/notizie/economia/2026/11/26/accordo-per-de-cos-alla-bce-ma-e-muro-contro-muro-sul-bilancio_b89e1430-4300-482f-9508-c475065af9d8.html",
+    "ora": "26/11 23:19",
+    "ts": 1795735179.0
    },
    {
-    "titolo": "Via libera alla mega-costellazione Starmind di Musk, fino a 1 milione di satelliti",
-    "descrizione": "Porterà i data center in orbita. Preoccupazioni per scienza, ambiente e concorrenza",
-    "link": "https://www.ansa.it/canale_scienza/notizie/spazio_astronomia/2026/11/26/via-libera-alla-mega-costellazione-starmind-di-musk-fino-a-1-milione-di-satelliti_33756ef2-b8ec-457a-96fb-5c147cb96539.html",
-    "ora": "26/11 13:17",
-    "ts": 1795699061.0
+    "titolo": "Attacco con droni in Kuwait, morti due tecnici italiani",
+    "descrizione": "\"E' stato l'Iran\". Ma Teheran sente Tajani e nega, 'pronti ad inchiesta congiunta'",
+    "link": "https://www.ansa.it/sito/notizie/mondo/2026/11/26/due-tecnici-italiani-della-rheinmetall-morti-in-un-attacco-in-kuwait_060489c8-4e35-4f04-9c6a-ade4a80acda4.html",
+    "ora": "26/11 23:17",
+    "ts": 1795735021.0
    },
    {
-    "titolo": "ANSA Newsroom | Fallisce la Cop31, niente accordo sul clima",
-    "descrizione": "La conferenza di Antalya al centro dell'approfondimento del giovedì alle 14. Ospite il velista Giovanni Soldini, attivamente impegnato sui temi del cambiamento climatico",
-    "link": "https://www.ansa.it/sito/notizie/speciali/ansa-newsroom/2026/11/25/ansa-newsroom-fallisce-la-cop31-il-clima-non-riscalda-gli-animi_d1956a1b-054a-4396-99af-f3f1507114d8.html",
-    "ora": "26/11 13:09",
-    "ts": 1795698599.0
+    "titolo": "Europa League: la Juve si spaventa e poi dilaga, poker all'Omonia",
+    "descrizione": "Sotto 0-1 tra i fischi, i bianconeri ne fanno 4 e segna pure Ekhator",
+    "link": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/26/europa-league-juventus-omonia-4-1_cb9c81b7-a2f3-4183-98e9-a3d1491cbfaa.html",
+    "ora": "26/11 22:29",
+    "ts": 1795732155.0
+   },
+   {
+    "titolo": "L'Italbasket fa festa, Turchia battuta e Mattarella applaude",
+    "descrizione": "Al PalaEur azzurri vincono 86-72, sesta vittoria nel girone e intravedono il Mondiale",
+    "link": "https://www.ansa.it/sito/notizie/sport/basket/2026/11/26/litalbasket-fa-festa-turchia-battuta-e-mattarella-applaude_4504c1af-9519-412b-a2e9-b333a566cfed.html",
+    "ora": "26/11 21:40",
+    "ts": 1795729236.0
+   },
+   {
+    "titolo": "Il cda di Rcs designa Stefano Barigelli per la direzione del Corriere",
+    "descrizione": "La scelta all'unanimità. 'Dovrà guidare il giornale in una fase di grande trasformazione'",
+    "link": "https://www.ansa.it/sito/notizie/politica/2026/11/26/il-cda-di-rcs-designa-stefano-barigelli-per-la-direzione-del-corriere_fb40f7d3-e251-4706-b202-ebdf33314802.html",
+    "ora": "26/11 21:10",
+    "ts": 1795727400.0
+   },
+   {
+    "titolo": "Ilona Staller: 'Mi candido a sindaco di Roma, ci sto già lavorando'",
+    "descrizione": "\"Con me capitale diventerà moderna e vivibile. Gualtieri? Sarò meglio di lui\"",
+    "link": "https://www.ansa.it/sito/notizie/politica/2026/11/26/ilona-staller-mi-candido-a-sindaco-di-roma-ci-sto-gia-lavorando_564e00ea-bb1d-4296-8c86-30d65e6614c0.html",
+    "ora": "26/11 21:06",
+    "ts": 1795727190.0
+   },
+   {
+    "titolo": "De Gennaro: 'Non ho tradito, un condannato a morte non mente'",
+    "descrizione": "La famiglia: 'La lettera integrale sia pubblica'. Mattarella ai funerali. Verso un coordinamento fra le procure",
+    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/26/la-lettera-di-de-gennaro-sul-corriere-io-condannato-a-morte_8d506c3b-6d62-4d78-a4a7-2c6bed64af4a.html",
+    "ora": "26/11 20:48",
+    "ts": 1795726092.0
    },
    {
     "titolo": "Ucraina, Kushner: 'Putin ha mostrato finora moderazione non usando armi nucleari'",
-    "descrizione": "E' un grande uomo della politica, una figura storica'. Il Cremlino a von der Leyen: 'Non puoi dettare le condizioni per i negoziati'. La presidente Ue aveva chiesto una tregua nei raid sui siti energetici",
+    "descrizione": "Kiev: 'Non abbiamo alcuna intenzione di estendere la guerra alla Libia'",
     "link": "https://www.ansa.it/sito/notizie/mondo/2026/11/26/ucraina-kushner-putin-ha-mostrato-finora-moderazione-non-usando-armi-nucleari_85352e5f-375f-426f-821c-b842ff42a209.html",
-    "ora": "26/11 13:01",
-    "ts": 1795698081.0
+    "ora": "26/11 20:44",
+    "ts": 1795725859.0
    },
    {
-    "titolo": "È vero che questo inverno potremmo risparmiare il gas di un milione di case?",
-    "descrizione": "",
-    "link": "https://www.ansa.it/sito/podcast/ansa_verified/2026/11/26/e-vero-che-questo-inverno-potremmo-risparmiare-il-gas-di-un-milione-di-case_9fe3c01b-c6c7-4370-8462-0113ac2228ec.html",
-    "ora": "26/11 12:56",
-    "ts": 1795697795.0
-   },
-   {
-    "titolo": "Il vertice Ue dedicato al bilancio. Meloni: 'Su questo tema siamo a anni luce da una soluzione'",
-    "descrizione": "Merz: 'Il bilancio Ue proposto è ancora troppo alto, no a nuovo debito comune'",
-    "link": "https://www.ansa.it/sito/notizie/mondo/2026/11/26/al-via-il-vertice-ue-dedicato-al-bilancio.-meloni-niente-tagli-al-bilancio_d61f8cab-2589-48ec-a6bb-ff3094591418.html",
-    "ora": "26/11 12:56",
-    "ts": 1795697762.0
-   },
-   {
-    "titolo": "Anziana morì in incendio in casa, un vicino arrestato per omicidio",
-    "descrizione": "A Milano. L'83enne era disabile e allettata, l'uomo accusato anche di un altro rogo",
-    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/26/anziana-mori-in-incendio-in-casa-un-vicino-arrestato-per-omicidio_046de424-d939-45ec-b831-af5519e28ba8.html",
-    "ora": "26/11 12:43",
-    "ts": 1795697007.0
-   },
-   {
-    "titolo": "Media di Gaza: \"Sei vittime negli attacchi dell'Idf durante la notte\"",
-    "descrizione": "Netanyahu conferma raid Idf contro funzionario di Hamas",
-    "link": "https://www.ansa.it/sito/notizie/mondo/2026/11/26/media-di-gaza-sei-vittime-negli-attacchi-dellidf-durante-la-notte_c0f550f8-65b7-42e6-b150-711ca9835ef4.html",
-    "ora": "26/11 12:42",
-    "ts": 1795696967.0
-   },
-   {
-    "titolo": "Meloni: “La guerra non si deve allargare al Mediterraneo”",
-    "descrizione": "“Sul bilancio Ue siamo ad anni luce da una soluzione”",
-    "link": "https://www.ansa.it/sito/videogallery/italia/2026/11/26/meloni-la-guerra-non-si-deve-allargare-al-mediterraneo_57609a1e-160d-45fb-abdc-cddaba717500.html",
-    "ora": "26/11 12:41",
-    "ts": 1795696884.0
+    "titolo": "La maggioranza blinda il condono, ma niente sanatoria per le zone sismiche",
+    "descrizione": "Superbonus, Orsini:'si torna a prima'. Meloni: 'stiamo dipanando le matasse'. Rebus sanità",
+    "link": "https://www.ansa.it/sito/notizie/politica/2026/11/26/salvini-in-manovra-una-norma-sul-condono-la-stiamo-costruendo-con-i-comuni_6c4a993a-9e13-463d-b930-9be3df31a000.html",
+    "ora": "26/11 20:11",
+    "ts": 1795723871.0
    }
   ],
   "cronaca": [
    {
-    "titolo": "Indagine a Milano su 'falange armata', ipotesi associazione terroristica",
-    "descrizione": "Fascicolo aperto sulla base di un esposto, 'da omicidio Mormile fino alle stragi '92-'93'",
-    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/26/indagine-a-milano-su-falange-armata-ipotesi-associazione-terroristica_2a068821-f2c9-431a-b9cb-fffa6daf77a3.html",
-    "ora": "26/11 13:16",
-    "ts": 1795699007.0
-   },
-   {
-    "titolo": "Biglietto scritto nel 1945 trovato in mercatino a Prato, consegnato a familiari",
-    "descrizione": "Anagrafe di Palermo rintraccia l'autore e restituisce documento ai suoi eredi",
-    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/26/biglietto-scritto-nel-1945-trovato-in-mercatino-a-prato-consegnato-a-familiari_08aa7de3-1a30-4e52-a102-5c97a4a78bbe.html",
-    "ora": "26/11 13:10",
-    "ts": 1795698609.0
-   },
-   {
-    "titolo": "Anziana morì in incendio in casa, un vicino arrestato per omicidio",
-    "descrizione": "A Milano. L'83enne era disabile e allettata, l'uomo accusato anche di un altro rogo",
-    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/26/anziana-mori-in-incendio-in-casa-un-vicino-arrestato-per-omicidio_046de424-d939-45ec-b831-af5519e28ba8.html",
-    "ora": "26/11 12:43",
-    "ts": 1795697007.0
-   },
-   {
-    "titolo": "La lettera di De Gennaro sul Corriere: 'Io, condannato a morte'. Meloni: 'Fare chiarezza, vicenda che mi ha scioccato'",
-    "descrizione": "'Questo è il mio testamento morale. Non ho mai chiesto nulla per me'",
+    "titolo": "De Gennaro: 'Non ho tradito, un condannato a morte non mente'",
+    "descrizione": "La famiglia: 'La lettera integrale sia pubblica'. Mattarella ai funerali. Verso un coordinamento fra le procure",
     "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/26/la-lettera-di-de-gennaro-sul-corriere-io-condannato-a-morte_8d506c3b-6d62-4d78-a4a7-2c6bed64af4a.html",
-    "ora": "26/11 12:09",
-    "ts": 1795694975.0
+    "ora": "26/11 20:48",
+    "ts": 1795726092.0
    },
    {
-    "titolo": "Chiama la fidanzata e poi si dà fuoco in auto, 51enne morto a Monza",
-    "descrizione": "Inutili i soccorsi, il corpo carbonizzato è stato trovato nel veicolo in fiamme",
-    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/26/chiama-la-fidanzata-e-poi-si-da-fuoco-in-auto-51enne-morto-a-monza_bb40438b-8aa0-4faf-a465-56f1500ba93f.html",
-    "ora": "26/11 12:01",
-    "ts": 1795694463.0
+    "titolo": "Il telefonista di Emanuela Orlandi sarebbe un ex 007",
+    "descrizione": "'Chi l'ha visto': è l'ex Sisde Martufi. La famiglia Gregori chiede una perizia fonica",
+    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/26/chi-lha-visto-e-di-un-ex-007-la-voce-del-telefonista-di-emanuela-orlandi_a12a4e85-6eb9-4eac-bada-c410e3a9955c.html",
+    "ora": "26/11 20:05",
+    "ts": 1795723519.0
    },
    {
-    "titolo": "Uccide la compagna poi si getta dal viadotto, lo stesso cavalcavia di Lorena Isceri",
-    "descrizione": "Il femminicidio è avvenuto nel Pistoiese. La vittima aveva 24 anni",
+    "titolo": "Saccoccio e Lo Russo, chi erano i due tecnici morti in Kuwait",
+    "descrizione": "Il giovane e il veterano, entrambi originari del Lazio ed esperti del sistema Skyguard",
+    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/26/saccoccio-e-lo-russo-chi-erano-i-due-tecnici-morti-in-kuwait_25cdff06-f763-4a56-840c-5983e2295a1e.html",
+    "ora": "26/11 19:24",
+    "ts": 1795721076.0
+   },
+   {
+    "titolo": "Kuwait, vedova Beci 'il pensiero alle famiglie, dopo 23 anni aspetto Marco'",
+    "descrizione": "Carla perse il marito a Nassiryia, 'mi crollò il mondo. Ho fatto da scudo ai figli\"",
+    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/26/kuwait-vedova-beci-il-pensiero-alle-famiglie-dopo-23-anni-aspetto-marco_064157e3-7a2e-47a9-bd32-33ca891bf2aa.html",
+    "ora": "26/11 19:21",
+    "ts": 1795720914.0
+   },
+   {
+    "titolo": "Uccide la compagna 23enne poi si dà fuoco e si getta dal viadotto",
+    "descrizione": "E' lo stesso ponte dell'A1 nel Fiorentino dove fu ammazzata Lorena Isceri",
     "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/26/uccide-compagna-poi-si-getta-dal-viadotto-lo-stesso-cavalcavia-di-lorena-isceri_6f905f2b-8704-4a58-90da-00838cbf4689.html",
-    "ora": "26/11 11:38",
-    "ts": 1795693102.0
+    "ora": "26/11 19:18",
+    "ts": 1795720736.0
    },
    {
-    "titolo": "Uccise un anziano in carrozzina, Martinez chiede di patteggiare un anno",
-    "descrizione": "Il portiere dell'Inter ha investito l'81enne nell'ottobre 2025 in provincia di Como",
-    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/26/uccise-un-anziano-in-carrozzina-martinez-chiede-di-patteggiare-un-anno_5ba3f51c-fcf7-40f0-9916-a233188eff5f.html",
-    "ora": "26/11 11:28",
-    "ts": 1795692508.0
+    "titolo": "L'albero della discordia a Milano, 'lasciateci la tradizione'",
+    "descrizione": "Anche Fiorello contro, Salvini: 'lo chiamiamo di Natale'. Sala: 'polemica meschina'",
+    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/26/lalbero-della-discordia-a-milano-lasciateci-la-tradizione_5147ea1d-48f8-4306-aab7-d0cecbe747cd.html",
+    "ora": "26/11 18:24",
+    "ts": 1795717450.0
    },
    {
-    "titolo": "Trovato cadavere nell'ex Città del rugby a Roma, indaga la polizia",
-    "descrizione": "Il corpo non è ancora stato identificato",
-    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/26/trovato-cadavere-nellex-citta-del-rugby-a-roma-indaga-la-polizia_e4fc78aa-80f2-4d59-8493-6ce1b72b90cc.html",
-    "ora": "26/11 11:19",
-    "ts": 1795691993.0
-   },
-   {
-    "titolo": "Il mondo del calcio con Lega serie A e Lega serie B scende in campo per l'Unicef",
-    "descrizione": "In occasione delle 13/a Giornata della serie A e delle 14/a della Bkt",
-    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/26/il-mondo-del-calcio-con-lega-serie-a-e-lega-serie-b-scende-in-campo_e4ece7dd-b788-4630-8d09-1ca87343df47.html",
-    "ora": "26/11 10:56",
-    "ts": 1795690617.0
+    "titolo": "Tg1, la cassetta con la voce del telefonista a casa dello zio di Emanuela Orlandi",
+    "descrizione": "Le registrazioni trovate durante una perquisizione due anni fa",
+    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/25/tg1-la-cassetta-con-voce-del-telefonista-a-casa-dello-zio-di-emanuela_3c3039fb-9eff-41c6-a3e9-34866e31167b.html",
+    "ora": "26/11 18:15",
+    "ts": 1795716911.0
    },
    {
     "titolo": "Incendio in un palazzo a Bologna, 14 feriti di cui tre gravi",
-    "descrizione": "Cinquanta evacuati, anche bambini piccoli intossicati",
+    "descrizione": "Cinquanta gli evacuati, anche bambini piccoli intossicati. L'ipotesi del cortocircuito",
     "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/26/incendio-in-un-palazzo-a-bologna-14-feriti-di-cui-tre-gravi_edfa33c7-df53-47be-af98-e3f5bb5ab7b6.html",
-    "ora": "26/11 10:53",
-    "ts": 1795690380.0
+    "ora": "26/11 17:56",
+    "ts": 1795715790.0
+   },
+   {
+    "titolo": "La Cassazione respinge il ricorso del carcere, Cospito può comprare libri e cd",
+    "descrizione": "Il reclamo dell'istituto di Sassari è stato inviato a due indirizzi pec sbagliati",
+    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/26/la-cassazione-respinge-il-ricorso-del-carcere-cospito-puo-comprare-libri-e-cd_4b216736-4ea3-4112-94a1-4e275751351b.html",
+    "ora": "26/11 17:11",
+    "ts": 1795713110.0
+   },
+   {
+    "titolo": "Famiglia De Gennaro, rendere pubblica integralmente la sua lettera aperta",
+    "descrizione": "'Non divulgate quelle destinate ai familiari'",
+    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/26/famiglia-de-gennaro-rendere-pubblica-integralmente-la-sua-lettera-aperta_b1ff977b-3066-48d3-b6d6-ab4dd64197bf.html",
+    "ora": "26/11 17:09",
+    "ts": 1795712968.0
    }
   ],
   "abruzzo": [
+   {
+    "titolo": "Gran Sasso Teramano, via libera dei soci alla vendita di Prati di Tivo e Prato Selva",
+    "descrizione": "Mandato dell'assemblea ai liquidatori per predisporre il bando per l'ingresso di privati",
+    "link": "https://www.ansa.it/abruzzo/notizie/2026/11/26/gran-sasso-teramano-via-libera-dei-soci-alla-vendita-di-prati_6cb3c923-89aa-4cd3-b16f-c7f1cc14c188.html",
+    "ora": "26/11 18:23",
+    "ts": 1795717422.0
+   },
+   {
+    "titolo": "Criticità Cup Atri: Ugl denuncia sportelli chiusi, Asl avvia verifiche su gestore",
+    "descrizione": "Il sindacato segnala code di cento utenti, l'Azienda difende la dotazione oraria",
+    "link": "https://www.ansa.it/abruzzo/notizie/2026/11/26/criticita-cup-atri-ugl-denuncia-sportelli-chiusi-asl-avvia-verifiche_aac9b10b-a8bc-4d9a-b644-75030e4588b7.html",
+    "ora": "26/11 16:48",
+    "ts": 1795711703.0
+   },
    {
     "titolo": "A Pescara ricerca per un protocollo sulla frollatura del pesce",
     "descrizione": "Università di Teramo, ristoratori e veterinari studiano sicurezza e qualità del prodotto",
@@ -168,53 +182,39 @@
     "ts": 1795468162.0
    },
    {
-    "titolo": "Scoperto all'Archivio di Stato di Teramo il manoscritto inedito di Quinto Ercole",
-    "descrizione": "Notato nel Fondo Questura autografo originale di 'Un anno e mezzo di vita militare' (1898)",
-    "link": "https://www.ansa.it/abruzzo/notizie/2026/11/21/scoperto-allarchivio-di-stato-di-teramo-il-manoscritto-inedito-di-quinto-ercole_685ac72f-4497-4e6c-99d4-75a5ffc582be.html",
-    "ora": "21/11 17:43",
-    "ts": 1795283021.0
+    "titolo": "Appello all'Aquila per una sede permanente dell'opera 'L'onda della memoria'",
+    "descrizione": "Raccolta di firme per la tela dipinta da 332 residenti e 18 artisti nel post-sisma",
+    "link": "https://www.ansa.it/abruzzo/notizie/2026/11/26/appello-allaquila-per-una-sede-permanente-dellopera-londa-della-memoria_460b8091-7ac3-4dc9-9dc1-710adcc6ae33.html",
+    "ora": "26/11 21:37",
+    "ts": 1795729061.0
    },
    {
-    "titolo": "A Chieti la Marcia cittadina per i diritti dell'infanzia e dell'adolescenza",
-    "descrizione": "Corteo studenti e insegnanti dalla Villa Comunale fino a piazza San Giustino",
-    "link": "https://www.ansa.it/abruzzo/notizie/2026/11/26/a-chieti-la-marcia-cittadina-per-i-diritti-dellinfanzia-e-delladolescenza_031fe9db-6098-47c5-9f0f-3ebb8ba6c70f.html",
-    "ora": "26/11 13:26",
-    "ts": 1795699582.0
+    "titolo": "Santino Spinelli parla all'Onu, è la prima volta di un rom italiano",
+    "descrizione": "A Ginevra, per 19/o Forum sulle minoranze, anche consigliera comunale Maria Deborah Cieri",
+    "link": "https://www.ansa.it/abruzzo/notizie/2026/11/26/santino-spinelli-parla-allonu-e-la-prima-volta-di-un-rom-italiano_376debe7-774a-45ac-9924-894ee9c54df5.html",
+    "ora": "26/11 21:36",
+    "ts": 1795729009.0
    },
    {
-    "titolo": "Scuole all'Aquila, comitati scrivono a Meloni dopo disagi in plessi",
-    "descrizione": "Chiesti i risultati delle verifiche sismiche sugli edifici comunali",
-    "link": "https://www.ansa.it/abruzzo/notizie/2026/11/26/scuole-allaquila-comitati-scrivono-a-meloni-dopo-disagi-in-plessi_cadebe68-9e30-4dd8-863f-f910007811ec.html",
-    "ora": "26/11 13:21",
-    "ts": 1795699292.0
+    "titolo": "'Sede Regione tra infiltrazioni e crolli, ma la Giunta non interviene'",
+    "descrizione": "Blasioli (Pd), 'strutture non a norma, la Regione occupa i locali a Pescara senza titolo'",
+    "link": "https://www.ansa.it/abruzzo/notizie/2026/11/26/sede-regione-tra-infiltrazioni-e-crolli-ma-la-giunta-non-interviene_8da0417b-1d58-4667-aed4-9f5ca5040171.html",
+    "ora": "26/11 19:30",
+    "ts": 1795721427.0
    },
    {
-    "titolo": "Borse di studio per i giovani rugbisti della provincia dell'Aquila",
-    "descrizione": "Sono stati stanziati 12 mila euro per gli under 16 e under 18",
-    "link": "https://www.ansa.it/abruzzo/notizie/2026/11/26/borse-di-studio-per-i-giovani-rugbisti-della-provincia-dellaquila_5a1a69d1-0bbd-4cdf-96fc-d8dd7a8679ff.html",
-    "ora": "26/11 13:16",
-    "ts": 1795698968.0
+    "titolo": "Rizzo sui tribunali abruzzesi, 'da destra e sinistra impegno farlocco solo per i voti'",
+    "descrizione": "'Hanno fatto finta di impegnarsi in campagna elettorale, poi se ne sono lavati le mani'",
+    "link": "https://www.ansa.it/abruzzo/notizie/2026/11/26/rizzo-sui-tribunali-abruzzesi-da-destra-e-sinistra-impegno-farlocco-solo-per_e2deae6e-0679-4f3a-bc91-4c7609f26cf6.html",
+    "ora": "26/11 16:26",
+    "ts": 1795710363.0
    },
    {
-    "titolo": "Escursionista scomparso sul Gran Sasso, la sorella ringrazia i soccorritori",
-    "descrizione": "'Non era il finale che speravamo ma ora possiamo dirgli addio'",
-    "link": "https://www.ansa.it/abruzzo/notizie/2026/11/26/escursionista-scomparso-sul-gran-sasso-la-sorella-ringrazia-i-soccorritori_4e6fcd82-3bc3-4e6a-9204-4587120cd9b2.html",
-    "ora": "26/11 11:56",
-    "ts": 1795694165.0
-   },
-   {
-    "titolo": "Tribunali abruzzesi, nuovo sit-in di protesta dei sindaci il 9 dicembre",
-    "descrizione": "Amministrazioni in piazza dopo il rinvio della discussione sul ddl Nordio",
-    "link": "https://www.ansa.it/abruzzo/notizie/2026/11/26/tribunali-abruzzesi-nuovo-sit-in-di-protesta-dei-sindaci-il-9-dicembre_bb6d0f2d-a0a4-4368-b5a9-23b8abd89421.html",
-    "ora": "26/11 11:55",
-    "ts": 1795694130.0
-   },
-   {
-    "titolo": "Violenza donne: Marsilio, impegno quotidiano che coinvolga l'intera comunità",
-    "descrizione": "",
-    "link": "https://www.ansa.it/abruzzo/notizie/2026/11/25/violenza-donne-marsilio-impegno-quotidiano-che-coinvolga-lintera-comunita_5522f8a3-8870-4d17-af3c-914c10671e4d.html",
-    "ora": "26/11 09:28",
-    "ts": 1795685288.0
+    "titolo": "'Leader della Crescita', azienda abruzzese scala classifica con e-commerce e AI",
+    "descrizione": "3PW, con 50 dipendenti, guida 70 grandi brand su Amazon. Oggi i dati su Il Sole 24 Ore",
+    "link": "https://www.ansa.it/abruzzo/notizie/2026/11/26/leader-della-crescita-azienda-abruzzese-scala-classifica-con-e-commerce-e-ai_ee106816-88ef-432a-a780-ad07a84371b4.html",
+    "ora": "26/11 16:21",
+    "ts": 1795710106.0
    }
   ]
  }
