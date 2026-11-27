@@ -1,13 +1,34 @@
 {
- "aggiornato": "2026-11-27T00:24:35.464314+00:00",
+ "aggiornato": "2026-11-27T13:36:22.532595+00:00",
  "sezioni": {
   "prime": [
    {
-    "titolo": "La Spagna al voto, Sanchez attacca Pp e Vox",
-    "descrizione": "Abascal: 'Ceuta è sfera di cristallo del futuro del Paese se continuate a governare'",
-    "link": "https://www.ansa.it/sito/notizie/mondo/europa/2026/11/26/la-spagna-al-voto-ultima-sfida-in-tv-tra-il-blocco-progressista-e-le-destre_16e91653-bfa6-450d-8daf-d5d5b3b5ef9e.html",
-    "ora": "26/11 23:26",
-    "ts": 1795735608.0
+    "titolo": "Il Costa Rica respinge Francesca Albanese, relatrice Onu per i territori palestinesi",
+    "descrizione": "La replica: \"Conosci il vero volto di una autorità quando dai fastidio\". Plaude Israele",
+    "link": "https://www.ansa.it/sito/notizie/mondo/2026/11/27/il-costa-rica-respinge-francesca-albanese-relatrice-onu-per-i-territori-palestinesi_a89517c3-d027-4d75-99d6-19f99fa5a15b.html",
+    "ora": "27/11 05:50",
+    "ts": 1795758604.0
+   },
+   {
+    "titolo": "++ Sciopero dei giornalisti dell'ANSA, il sito non è aggiornato ++",
+    "descrizione": "",
+    "link": "https://www.ansa.it/sito/notizie/flash/2026/11/27/-sciopero-dei-giornalisti-dellansa-il-sito-non-e-aggiornato-_2fc25b5e-abdb-4a26-9041-cbf6e88d10ad.html",
+    "ora": "27/11 05:40",
+    "ts": 1795758006.0
+   },
+   {
+    "titolo": "Spagna, Sanchez e Colau in tandem credono nella rimonta sul consorzio Feijoo e Abascal",
+    "descrizione": "Nell'ultimo duello tv i 2 candidati progressisti hanno incalzato le destre, poco compatte",
+    "link": "https://www.ansa.it/sito/notizie/mondo/2026/11/27/spagna-sanchez-e-colau-in-tandem-credono-nella-rimonta-sul-consorzio-feijoo_ea91670f-862d-4fa7-8026-2204493d546c.html",
+    "ora": "27/11 02:29",
+    "ts": 1795746551.0
+   },
+   {
+    "titolo": "Il bilancio spacca l'Europa ma Costa insiste: 'Serve un'intesa a dicembre'",
+    "descrizione": "La forte irritazione di Meloni, scettica sui finanziamenti automatici per Kiev",
+    "link": "https://www.ansa.it/europa/notizie/rubriche/altrenews/2026/11/27/ansail-bilancio-spacca-leuropa-ma-costa-insiste-serve-unintesa-a-dicembre_fe68840f-5fc7-4c53-b41a-e795d3b27382.html",
+    "ora": "27/11 00:55",
+    "ts": 1795740908.0
    },
    {
     "titolo": "Accordo per De Cos alla Bce, ma è muro contro muro sul bilancio Ue",
@@ -22,20 +43,6 @@
     "link": "https://www.ansa.it/sito/notizie/mondo/2026/11/26/due-tecnici-italiani-della-rheinmetall-morti-in-un-attacco-in-kuwait_060489c8-4e35-4f04-9c6a-ade4a80acda4.html",
     "ora": "26/11 23:17",
     "ts": 1795735021.0
-   },
-   {
-    "titolo": "Europa League: la Juve si spaventa e poi dilaga, poker all'Omonia",
-    "descrizione": "Sotto 0-1 tra i fischi, i bianconeri ne fanno 4 e segna pure Ekhator",
-    "link": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/26/europa-league-juventus-omonia-4-1_cb9c81b7-a2f3-4183-98e9-a3d1491cbfaa.html",
-    "ora": "26/11 22:29",
-    "ts": 1795732155.0
-   },
-   {
-    "titolo": "L'Italbasket fa festa, Turchia battuta e Mattarella applaude",
-    "descrizione": "Al PalaEur azzurri vincono 86-72, sesta vittoria nel girone e intravedono il Mondiale",
-    "link": "https://www.ansa.it/sito/notizie/sport/basket/2026/11/26/litalbasket-fa-festa-turchia-battuta-e-mattarella-applaude_4504c1af-9519-412b-a2e9-b333a566cfed.html",
-    "ora": "26/11 21:40",
-    "ts": 1795729236.0
    },
    {
     "titolo": "Il cda di Rcs designa Stefano Barigelli per la direzione del Corriere",
@@ -64,16 +71,16 @@
     "link": "https://www.ansa.it/sito/notizie/mondo/2026/11/26/ucraina-kushner-putin-ha-mostrato-finora-moderazione-non-usando-armi-nucleari_85352e5f-375f-426f-821c-b842ff42a209.html",
     "ora": "26/11 20:44",
     "ts": 1795725859.0
-   },
-   {
-    "titolo": "La maggioranza blinda il condono, ma niente sanatoria per le zone sismiche",
-    "descrizione": "Superbonus, Orsini:'si torna a prima'. Meloni: 'stiamo dipanando le matasse'. Rebus sanità",
-    "link": "https://www.ansa.it/sito/notizie/politica/2026/11/26/salvini-in-manovra-una-norma-sul-condono-la-stiamo-costruendo-con-i-comuni_6c4a993a-9e13-463d-b930-9be3df31a000.html",
-    "ora": "26/11 20:11",
-    "ts": 1795723871.0
    }
   ],
   "cronaca": [
+   {
+    "titolo": "Uomo ucciso dal figlio a Trieste",
+    "descrizione": "Omicidio avvenuto in nottata. Indaga la Polizia",
+    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/27/uomo-ucciso-dal-figlio-a-trieste_8b12408b-d7e6-47bd-9e9f-35373956c183.html",
+    "ora": "27/11 05:59",
+    "ts": 1795759195.0
+   },
    {
     "titolo": "De Gennaro: 'Non ho tradito, un condannato a morte non mente'",
     "descrizione": "La famiglia: 'La lettera integrale sia pubblica'. Mattarella ai funerali. Verso un coordinamento fra le procure",
@@ -136,13 +143,6 @@
     "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/26/la-cassazione-respinge-il-ricorso-del-carcere-cospito-puo-comprare-libri-e-cd_4b216736-4ea3-4112-94a1-4e275751351b.html",
     "ora": "26/11 17:11",
     "ts": 1795713110.0
-   },
-   {
-    "titolo": "Famiglia De Gennaro, rendere pubblica integralmente la sua lettera aperta",
-    "descrizione": "'Non divulgate quelle destinate ai familiari'",
-    "link": "https://www.ansa.it/sito/notizie/cronaca/2026/11/26/famiglia-de-gennaro-rendere-pubblica-integralmente-la-sua-lettera-aperta_b1ff977b-3066-48d3-b6d6-ab4dd64197bf.html",
-    "ora": "26/11 17:09",
-    "ts": 1795712968.0
    }
   ],
   "abruzzo": [
